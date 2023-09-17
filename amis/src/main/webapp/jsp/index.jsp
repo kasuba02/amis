@@ -35,7 +35,7 @@
   <link href="assets/css/semi-dark.css" rel="stylesheet" />
   <link href="assets/css/header-colors.css" rel="stylesheet" />
 
-  <title>Skodash - Bootstrap 5 Admin Template</title>
+  <title>Asset Management System</title>
 </head>
 
 <body>
@@ -520,7 +520,7 @@
               <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
             </div>
             <div>
-              <h4 class="logo-text">Skodash</h4>
+              <h4 class="logo-text">AMIS</h4>
             </div>
             <div class="toggle-icon ms-auto"><i class="bi bi-chevron-double-left"></i>
             </div>

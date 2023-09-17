@@ -184,14 +184,30 @@ e.printStackTrace();
 		return pk;
 	}
 
-	public List list() throws Exception {
+	public List list(String theSearchName) throws Exception {
 		System.out.println("in model list");
 		ArrayList list = new ArrayList();
+		
+		Connection conn =null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		try {
-			Connection conn = null;
+		
 			conn = JDBCDataSource.getConnection();
-			PreparedStatement pstmt = conn.prepareStatement("SELECT * from user");
-			ResultSet rs = pstmt.executeQuery();
+			
+			 if (theSearchName != null && theSearchName.trim().length() > 0) {
+				 pstmt = conn.prepareStatement("select * from user where lower(firstname) like ? or lower(lastname) like ?");
+			 //set params
+             String theSearchNameLike = "%" + theSearchName.toLowerCase() + "%";
+             pstmt.setString(1, theSearchNameLike);
+             pstmt.setString(2, theSearchNameLike);
+			 
+			 }else {
+				 pstmt = conn.prepareStatement("SELECT * from user");
+			 }
+			 
+			 //execute statement
+			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				UserBean bean = new UserBean();
 				bean.setId(rs.getLong(1));

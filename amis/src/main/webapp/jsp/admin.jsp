@@ -185,7 +185,7 @@
                         </a>
                       </div>
                       <div class="col">
-                        <a href="javascript:;">
+                        <a href="<%=AMView.USER_LIST_CTL%>">
                         <div class="apps p-2 radius-10 text-center">
                            <div class="apps-icon-box mb-1 text-white bg-danger bg-gradient">
                              <i class="bi bi-people-fill"></i>
@@ -514,7 +514,7 @@
               <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
             </div>
             <div>
-              <h4 class="logo-text">Skodash</h4>
+              <h4 class="logo-text">SZI AMIS</h4>
             </div>
             <div class="toggle-icon ms-auto"><i class="bi bi-chevron-double-left"></i>
             </div>
