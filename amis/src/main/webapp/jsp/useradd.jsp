@@ -1,9 +1,10 @@
 <%@page import="com.amis.ms.Ctl.UserListCt"%>
 <%@page import="com.amis.ms.Ctl.UserCtl"%>
-<%@page import="com.amis.ms.Utility.ServletUtility"%>
 <%@page import="com.amis.ms.Bean.UserBean"%>
 <%@page import="com.amis.ms.Ctl.AMView"%>
 <%@page import="java.util.List"%>
+<%@page import="com.amis.ms.Ctl.AddUserCtl"%>
+
 
 <%@page import="com.amis.ms.Ctl.RegistrationCtl"%>
 <%@page import="com.amis.ms.Utility.ServletUtility"%>
@@ -1426,11 +1427,11 @@
         </div>
         <!--end breadcrumb-->
         
-        <!-- Update -->
+        <!-- Add User -->
 
       <div class="container mt-5">
-	<h3 class="text-center mt-5">Registration</h3>
-	<form action="<%=AMView.USER_CTL%>" method="post">
+	<h3 class="text-center mt-5">Add User</h3>
+	<form action="<%=AMView.USERADD_CTL%>" method="post">
 <h4 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h4>
 	<h4 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h4>
 	
@@ -1451,32 +1452,32 @@
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">First
 					Name</label> <input type="text" name="firstName" class="form-control "
-					id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean.getFirstName())%>">
+					id="exampleInputEmail1" aria-describedby="emailHelp" >
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("firstName", request)%></div>
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Last Name</label>
 				<input type="text" name="lastName" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean.getLastName())%>">
+					id="exampleInputEmail1" aria-describedby="emailHelp" >
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("lastName", request)%></div>
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Email</label> <input
 					type="text" name="email" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean.getEmail())%>">
+					id="exampleInputEmail1" aria-describedby="emailHelp" >
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("email", request)%></div>
 			<div class="col-6">
 				<label for="exampleInputPassword1" class="form-label">Password</label>
 				<input type="password" name="password" class="form-control"
-					id="exampleInputPassword1" value="<%=DataUtility.getStringData(bean.getPassword())%>">
+					id="exampleInputPassword1" >
 			</div>
 
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("password", request)%></div>
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">PhoneNo</label> <input
 					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp"  value="<%=DataUtility.getStringData(bean.getPhoneNo())%>">
+					id="exampleInputEmail1" aria-describedby="emailHelp"  >
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
 			

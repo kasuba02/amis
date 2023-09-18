@@ -13,6 +13,7 @@ public interface AMView {
 	public String INDEX_CTL = APP_CONTEXT + "/index";
 	public String LOGIN_CTL = APP_CONTEXT + "/login";
 	public String USER_CTL = APP_CONTEXT + "/user";
+	public String USERADD_CTL = APP_CONTEXT + "/adduser";
 	public String USER_REGISTRATION_CTL = APP_CONTEXT +  "/register";
 	public String USER_LIST_CTL = APP_CONTEXT + "/userlist";
 	public String HOLIDAY_CTL = APP_CONTEXT + "/holiday";
@@ -37,13 +38,12 @@ public interface AMView {
 	
 	
 	
-	
-	
 	//View-------------------------------------
 	public String WELCOME_VIEW = PAGE_FOLDER + "/welcome.jsp";
 	public String INDEX_VIEW = PAGE_FOLDER + "/index.jsp";
 	public String LOGIN_VIEW = PAGE_FOLDER + "/login.jsp";
 	public String USER_VIEW = PAGE_FOLDER + "/user.jsp";
+	public String USERADD_VIEW = PAGE_FOLDER + "/useradd.jsp";
 	public String USER_REGISTRATION_VIEW = PAGE_FOLDER + "/registration.jsp";
 	public String USER_LIST_VIEW = PAGE_FOLDER + "/userlist.jsp";
 	public String HOLIDAY_VIEW = PAGE_FOLDER + "/holiday.jsp";

@@ -1396,25 +1396,10 @@
           </div>
           <div class="ms-auto">
             <div class="btn-group">
-              <button type="button" class="btn btn-primary">Settings</button>
-              <button
-                type="button"
-                class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split"
-                data-bs-toggle="dropdown"
-              >
-                <span class="visually-hidden">Toggle Dropdown</span>
-              </button>
-              <div
-                class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"
-              >
-                <a class="dropdown-item" href="javascript:;">Action</a>
-                <a class="dropdown-item" href="javascript:;">Another action</a>
-                <a class="dropdown-item" href="javascript:;"
-                  >Something else here</a
-                >
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:;">Separated link</a>
-              </div>
+            <li><a href="<%=AMView.USERADD_CTL%>" >
+              <button type="button" class="btn btn-primary" >Add User</button>
+              </a>
+              </li>
             </div>
           </div>
         </div>
@@ -1423,7 +1408,7 @@
         <div class="card">
           <div class="card-body">
             <div class="d-flex align-items-center">
-              <h5 class="mb-0">Customer Details</h5>
+              <h5 class="mb-0">User Details</h5>
               <form class="ms-auto position-relative" action="<%=AMView.USER_LIST_CTL%>" 
               method="">
                 <div
@@ -1500,7 +1485,7 @@
                         class="table-actions d-flex align-items-center gap-3 fs-6"
                       >
                         <a
-                          href="javascript:;"
+                          href="<%=AMView.USER_CTL%>?id=<%=bean.getId()%>"
                           class="text-primary"
                           data-bs-toggle="tooltip"
                           data-bs-placement="bottom"
@@ -1508,7 +1493,7 @@
                           ><i class="bi bi-eye-fill"></i
                         ></a>
                         <a
-                          href="javascript:;"
+                          href="<%=AMView.USER_CTL%>?id=<%=bean.getId()%>"
                           class="text-warning"
                           data-bs-toggle="tooltip"
                           data-bs-placement="bottom"
@@ -1516,7 +1501,7 @@
                           ><i class="bi bi-pencil-fill"></i
                         ></a>
                         <a
-                          href="javascript:;"
+                          href="<%=AMView.USER_LIST_CTL%>?id=<%=bean.getId()%>"
                           class="text-danger"
                           data-bs-toggle="tooltip"
                           data-bs-placement="bottom"
