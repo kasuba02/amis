@@ -569,9 +569,11 @@
                 <div class="menu-title">Computers</div>
               </a>
               <ul>
-                <li> <a href="widgets-static-widgets.html"><i class="bi bi-arrow-right-short"></i>Static Widgets</a>
+                <li> <a href="widgets-static-widgets.html"><i class="bi bi-arrow-right-short"></i>Laptops</a>
                 </li>
-                <li> <a href="widgets-data-widgets.html"><i class="bi bi-arrow-right-short"></i>Data Widgets</a>
+                <li> <a href="widgets-data-widgets.html"><i class="bi bi-arrow-right-short"></i>Mobile Phones</a>
+                </li>
+                <li> <a href="widgets-data-widgets.html"><i class="bi bi-arrow-right-short"></i>Desktops</a>
                 </li>
               </ul>
             </li>
@@ -933,7 +935,7 @@
                   <div class="card-body">
                       <div class="d-flex align-items-center">
                           <div>
-                              <p class="mb-0 text-secondary">Total Customers</p>
+                              <p class="mb-0 text-secondary">Total Invoices</p>
                               <h4 class="my-1">5.8K</h4>
                               <p class="mb-0 font-13 text-danger"><i class="bi bi-caret-down-fill"></i> 2.7 from last week</p>
                           </div>
@@ -948,7 +950,7 @@
                   <div class="card-body">
                       <div class="d-flex align-items-center">
                           <div>
-                              <p class="mb-0 text-secondary">Bounce Rate</p>
+                              <p class="mb-0 text-secondary">Depreciated Assets</p>
                               <h4 class="my-1">38.15%</h4>
                               <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 12.2% from last week</p>
                           </div>
