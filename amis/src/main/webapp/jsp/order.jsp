@@ -1,9 +1,12 @@
 <%@page import="com.amis.ms.Ctl.UserListCt"%>
 <%@page import="com.amis.ms.Ctl.UserCtl"%>
+<%@page import="com.amis.ms.Ctl.HolidayCtl"%>
 <%@page import="com.amis.ms.Bean.UserBean"%>
 <%@page import="com.amis.ms.Ctl.AMView"%>
 <%@page import="java.util.List"%>
 <%@page import="com.amis.ms.Ctl.AddUserCtl"%>
+<%@page import="com.amis.ms.Ctl.OrderCtl"%>
+<%@page import="com.amis.ms.Bean.OrderBean"%>
 
 
 <%@page import="com.amis.ms.Ctl.RegistrationCtl"%>
@@ -18,6 +21,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript"> $('.datepicker').datepicker(); </script>
 
   <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -1427,111 +1433,152 @@
         </div>
         <!--end breadcrumb-->
         
-        <!-- Add User -->
-
-      <div class="container mt-5">
-	<h3 class="text-center mt-5">Make Order</h3>
-	<form action="<%=AMView.ORDER_CTL%>" method="post">
-<h4 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h4>
-	<h4 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h4>
+        <!-- Add Order -->
+  <%
+		UserBean bean2 = (UserBean) session.getAttribute("user");
+	%>
 	
-		<jsp:useBean id="bean" scope="request"
-			class="com.amis.ms.Bean.UserBean" />
-		<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
-			type="hidden" name="createdBy" value="<%=bean.getCreatedby()%>">
-		<input type="hidden" name="modifiedBy"
-			value="<%=bean.getModifiedby()%>"> <input type="hidden"
-			name="createdDatetime" value="<%=bean.getCreatedatetime()%>">
-		<input type="hidden" name="modifiedDateTime"
-			value="<%=bean.getModifieddatetime()%>">
+	<h3 class="text-center mt-5">Make Order</h3>
+	<hr>
+	<h5 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h5>
+	<h5 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h5>
 
-
-
+	<form action="<%=AMView.ORDER_CTL%>" method="post">
+	<jsp:useBean id="bean" scope="request"
+						class="com.amis.ms.Bean.OrderBean" />
+	
 		<div class="container mt-5">
-		  <div class="row h-100 justify-content-center align-items-center">
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">First
-					Name</label> <input type="text" name="firstName" class="form-control "
-					id="exampleInputEmail1" aria-describedby="emailHelp" >
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("firstName", request)%></div>
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Last Name</label>
-				<input type="text" name="lastName" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp" >
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("lastName", request)%></div>
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Email</label> <input
-					type="text" name="email" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp" >
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("email", request)%></div>
-			<div class="col-6">
-				<label for="exampleInputPassword1" class="form-label">Password</label>
-				<input type="password" name="password" class="form-control"
-					id="exampleInputPassword1" >
-			</div>
-
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("password", request)%></div>
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">PhoneNo</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp"  >
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			<%
-						HashMap<String, String> map = new HashMap<String, String>();
-						map.put("Procurement", "Procurement");
-						map.put("Accounts", "Accounts");
+			<div class="row h-100 justify-content-center align-items-center">
+				<div class="col-6">
+					<label class="form-label">Emp Name</label> <input type="text"
+						name="empName" class="form-control " value="<%=DataUtility.getStringData(bean2.getFirstName())%>" aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empName", request)%></div>
+				<div class="col-6">
+					<label class="form-label">Emp Email</label> <input type="text"
+						name="empEmail" class="form-control" value="<%=DataUtility.getStringData(bean2.getEmail())%>" aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empEmail", request)%></div>
+				<div class="col-6">
+					<label class="form-label">Emp ContactNo</label> <input type="text"
+						name="empContactNo" class="form-control"
+						aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean2.getPhoneNo())%>">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				
+				<%
+						HashMap<String, String> map1 = new HashMap<String, String>();
+						map1.put("Manager", "Manager");
+						map1.put("HR Department", "HR Department");
+						map1.put("Research and development Department", "Research and development Department");
+						map1.put("IT services Department", "IT services Department");
 					%>
 
 					<div class="col-6">
-						<label class="form-label">Department</label>
-						<%=HTMLUtility.getList("department", String.valueOf(bean.getDepartment()), map)%>
+						<label class="form-label" value="<%=DataUtility.getStringData(bean2.getDepartment())%>" >Department</label>
+						<%=HTMLUtility.getList("department", String.valueOf(bean2.getDepartment()), map1)%>
 						</div>
-						
-						
-						
-						<div class="col-6" style="margin-left:10px;">
-						<label class="form-label">Role</label>
-						<select name="role" class="form-control">
-						 <option >---Select---</option>
-						 <option value="2">Stock V Officer</option>
-						<option value="3">Procurement Officer</option> 
-						<option value="4">Manager Accounts</option>
-						<option value="5">Manager Procurement</option> 
-						 </select>
-						</div>
-						
 	<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("department", request)%></div>
 			
 			
+			
+	<%
+						HashMap<String, String> map = new HashMap<String, String>();
+						map.put("Laptop", "Laptop");
+						map.put("Desktop", "Desktop");
+						map.put("Printer", "Scanner");
+						map.put("Printer", "Printer");
+					%>
 
-<br>
-<div class="container text-center">
-			<%
-						if (bean.getId() > 0) {
-					%>
+					<div class="col-6">
+						<label class="form-label">Item type</label>
+						<%=HTMLUtility.getList("ItemType", String.valueOf(bean.getLeaveType()), map)%>
+						</div>
+	<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("ItemType", request)%></div>
+
+										
+
+
+				<div class="col-6">
+					<label class="form-label">Date</label> <input type="text"
+						name="leaveTo" data-provide="datepicker" id="datepicker" class="form-control" required="required">
+				</div>
+				<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("leaveDescription", request)%></div>
+
+		<br>
+				<div class="col-6">
+					<label class="form-label">Order Description</label>
+					<textarea rows="3" cols="3" name="leaveDescription"
+						class="form-control"></textarea>
+				</div>
+				<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("leaveDescription", request)%></div>
+
+        	<div class="col-6">
+					<label class="form-label">Order#</label> <input type="text"
+						name="order" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+           
+           <div class="col-6">
+					<label class="form-label">Item#</label> <input type="text"
+						name="item" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				
+				
+           <div class="col-6">
+					<label class="form-label">Qty#</label> <input type="text"
+						name="qty" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+          <div class="col-6">
+					<label class="form-label">UOM</label> <input type="text"
+						name="uom" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+
+
+          <div class="col-6">
+					<label class="form-label">Code</label> <input type="text"
+						name="code" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+
+         <div class="col-6">
+					<label class="form-label">Price</label> <input type="text"
+						name="price" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				
+				
+				<div class="col-6">
+					<label class="form-label">Amount</label> <input type="text"
+						name="amount" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				
+				<br>
+				<div class="container text-center">
 					<input type="submit" class="btn btn-primary" name="operation"
-						value="<%=UserCtl.OP_UPDATE%>">
-					<%
-						} else {
-					%>
-					<input type="submit" class="btn btn-primary" name="operation"
-						value="<%=UserCtl.OP_SAVE%>">
-					<%
-						}
-					%>
-					</div>
+						value="<%=OrderCtl.OP_SAVE%>">
+				</div>
 			</div>
+		
 		</div>
 	</form>
-<br>
+	<br>
 
 </div>
+      
+
+
       
        
       </main>

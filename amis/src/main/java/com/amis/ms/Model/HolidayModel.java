@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import in.co.leave.mg.Bean.HolidayBean;
-import in.co.leave.mg.Exception.ApplicationException;
-import in.co.leave.mg.Utility.JDBCDataSource;
+import com.amis.ms.Bean.HolidayBean;
+import com.amis.ms.Exception.ApplicationException;
+import com.amis.ms.Utility.JDBCDataSource;
 
 public class HolidayModel {
 
@@ -42,7 +42,7 @@ public class HolidayModel {
 			conn = JDBCDataSource.getConnection();
 			pk = nextpk();
 			conn.setAutoCommit(false);
-			PreparedStatement ps = conn.prepareStatement("INSERT INTO holiday VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement ps = conn.prepareStatement("INSERT INTO holiday VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			ps.setLong(1, pk);
 			ps.setString(2, bean.getEmpName());
 			ps.setString(3, bean.getEmpEmail());
@@ -55,9 +55,16 @@ public class HolidayModel {
 			// ps.setDate(7 ,new java.sql.Date(bean.getLeaveFrom().getTime()));
 			System.out.println("nooooookkkk");
 			ps.setString(8, bean.getLeavedescription());
-			ps.setLong(9, bean.getUserid());
-			ps.setString(10, bean.getStatus());
-			ps.setString(11, bean.getDepartment());
+			ps.setLong(9, bean.getOrder());
+			ps.setLong(10, bean.getItem());
+			ps.setLong(11, bean.getQty());
+			ps.setString(12, bean.getUom());
+			ps.setLong(13, bean.getCode());
+			ps.setLong(14, bean.getPrice());
+			ps.setLong(15, bean.getAmount());
+			ps.setLong(16, bean.getUserid());
+			ps.setString(17, bean.getStatus());
+			ps.setString(18, bean.getDepartment());
 			ps.executeUpdate();
 
 			conn.commit();

@@ -14,6 +14,55 @@ public class HolidayBean extends BaseBean{
 	private long userid;
 	private String status;
 	private String department;
+	private Long order;
+	private Long item;
+	public Long getAmount() {
+		return amount;
+	}
+	public void setAmount(Long amount) {
+		this.amount = amount;
+	}
+	private Long Qty;
+	private Long amount;
+	public Long getPrice() {
+		return price;
+	}
+	public void setPrice(Long price) {
+		this.price = price;
+	}
+	private Long code;
+	private String uom;
+	private Long price;
+	public String getUom() {
+		return uom;
+	}
+	public void setUom(String uom) {
+		this.uom = uom;
+	}
+	public Long getCode() {
+		return code;
+	}
+	public void setCode(Long code) {
+		this.code = code;
+	}
+	public Long getQty() {
+		return Qty;
+	}
+	public void setQty(Long qty) {
+		Qty = qty;
+	}
+	public Long getItem() {
+		return item;
+	}
+	public void setItem(Long item) {
+		this.item = item;
+	}
+	public Long getOrder() {
+		return order;
+	}
+	public void setOrder(Long order) {
+		this.order = order;
+	}
 	public String getDepartment() {
 		return department;
 	}

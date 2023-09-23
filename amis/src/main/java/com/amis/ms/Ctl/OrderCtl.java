@@ -12,6 +12,8 @@ import javax.servlet.http.HttpSession;
 
 import com.amis.ms.Bean.BaseBean;
 import com.amis.ms.Bean.HolidayBean;
+import com.amis.ms.Bean.OrderBean;
+import com.amis.ms.Model.OrderModel;
 import com.amis.ms.Bean.UserBean;
 import com.amis.ms.Exception.ApplicationException;
 import com.amis.ms.Exception.DuplicateRecordException;
@@ -20,6 +22,7 @@ import com.amis.ms.Utility.DataUtility;
 import com.amis.ms.Utility.DataValidator;
 import com.amis.ms.Utility.PropertyReader;
 import com.amis.ms.Utility.ServletUtility;
+
 
 /**
  * Servlet implementation class HolidayCtl
@@ -84,7 +87,7 @@ public class OrderCtl extends BaseCtl {
 
     @Override
 	protected BaseBean populateBean(HttpServletRequest request) {
-		HolidayBean bean = new HolidayBean();
+		OrderBean bean = new OrderBean();
 		HttpSession session = request.getSession(false);
 		UserBean existBean = (UserBean)session.getAttribute("user");
 		Long userId = existBean.getId();
@@ -97,8 +100,14 @@ public class OrderCtl extends BaseCtl {
 		bean.setLeaveType(DataUtility.getString(request.getParameter("leaveType")));
 		//bean.setLeaveFrom(LocalDate.parse(request.getParameter("leaveTo")));
 		bean.setLeaveTo(DataUtility.getDate(request.getParameter("leaveTo")));
-	    bean.setLeaveFrom(DataUtility.getDate(request.getParameter("leaveFrom")));
 		bean.setLeavedescription(DataUtility.getString(request.getParameter("leaveDescription")));
+		bean.setOrder(DataUtility.getLong(request.getParameter("order")));
+		bean.setItem(DataUtility.getLong(request.getParameter("item")));
+		bean.setQty(DataUtility.getLong(request.getParameter("qty")));
+		bean.setUom(DataUtility.getString(request.getParameter("uom")));
+		bean.setCode(DataUtility.getLong(request.getParameter("code")));
+		bean.setPrice(DataUtility.getLong(request.getParameter("price")));
+		bean.setAmount(DataUtility.getLong(request.getParameter("amount")));
 		bean.setDepartment(DataUtility.getString(request.getParameter("department")));
 		populateDTO(bean, request);
 		return bean;
@@ -112,18 +121,18 @@ public class OrderCtl extends BaseCtl {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("in do post");
-		HolidayModel model = new HolidayModel();
+		OrderModel model = new OrderModel();
 
 		String op = DataUtility.getString(request.getParameter("operation"));
 		long id = DataUtility.getLong(request.getParameter("id"));
-		HolidayBean bean = new HolidayBean();
-		bean = (HolidayBean) populateBean(request);
+		OrderBean bean = new OrderBean();
+		bean = (OrderBean) populateBean(request);
 		if (OP_SAVE.equalsIgnoreCase(op)) {
-			bean = (HolidayBean) populateBean(request);
+			bean = (OrderBean) populateBean(request);
 			try {
 				long pk = model.add(bean);
 				ServletUtility.setbean(bean, request);
-				ServletUtility.setSuccessMessage("Leave Applied", request);
+				ServletUtility.setSuccessMessage("Order Applied", request);
 				ServletUtility.forward(getView(), request, response);
 				return;
 			} catch (DuplicateRecordException e) {

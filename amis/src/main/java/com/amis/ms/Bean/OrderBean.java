@@ -1,78 +1,66 @@
 package com.amis.ms.Bean;
 
-public class OrderBean extends BaseBean {
+import java.util.Date;
+
+public class OrderBean extends BaseBean{
 	
-	 
-	  private long orderNumber;
-	  private String item;
-	  private long Qty;
-	  private String uom;
-	  private long code;
-	  private String description;
-	  private long price;
-	  private long amount;
-	  private long userid;
-	  private String status;
-	  private String department;
-	public long getOrderNumber() {
-		return orderNumber;
+	private String empName;
+	private String empEmail;
+	private String empContactNo;
+	private String leaveType;
+	private Date leaveTo;
+	private String leavedescription;
+	private long userid;
+	private String status;
+	private String department;
+	private Long order;
+	private Long item;
+	public Long getAmount() {
+		return amount;
 	}
-	public void setOrderNumber(long orderNumber) {
-		this.orderNumber = orderNumber;
+	public void setAmount(Long amount) {
+		this.amount = amount;
 	}
-	public String getItem() {
-		return item;
+	private Long Qty;
+	private Long amount;
+	public Long getPrice() {
+		return price;
 	}
-	public void setItem(String item) {
-		this.item = item;
+	public void setPrice(Long price) {
+		this.price = price;
 	}
-	public long getQty() {
-		return Qty;
-	}
-	public void setQty(long qty) {
-		Qty = qty;
-	}
+	private Long code;
+	private String uom;
+	private Long price;
 	public String getUom() {
 		return uom;
 	}
 	public void setUom(String uom) {
 		this.uom = uom;
 	}
-	public long getCode() {
+	public Long getCode() {
 		return code;
 	}
-	public void setCode(long code) {
+	public void setCode(Long code) {
 		this.code = code;
 	}
-	public String getDescription() {
-		return description;
+	public Long getQty() {
+		return Qty;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setQty(Long qty) {
+		Qty = qty;
 	}
-	public long getPrice() {
-		return price;
+	public Long getItem() {
+		return item;
 	}
-	public void setPrice(long price) {
-		this.price = price;
+	public void setItem(Long item) {
+		this.item = item;
 	}
-	public long getAmount() {
-		return amount;
+	public Long getOrder() {
+		return order;
 	}
-	public void setAmount(long amount) {
-		this.amount = amount;
-	}
-	public long getUserid() {
-		return userid;
-	}
-	public void setUserid(long userid) {
-		this.userid = userid;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
+	public void setOrder(Long order) {
+		this.order = order;
 	}
 	public String getDepartment() {
 		return department;
@@ -80,8 +68,57 @@ public class OrderBean extends BaseBean {
 	public void setDepartment(String department) {
 		this.department = department;
 	}
-	  
-	  
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public long getUserid() {
+		return userid;
+	}
+	public void setUserid(long userid) {
+		this.userid = userid;
+	}
+	public String getEmpName() {
+		return empName;
+	}
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+	public String getEmpEmail() {
+		return empEmail;
+	}
+	public void setEmpEmail(String empEmail) {
+		this.empEmail = empEmail;
+	}
+	public String getEmpContactNo() {
+		return empContactNo;
+	}
+	public void setEmpContactNo(String empContactNo) {
+		this.empContactNo = empContactNo;
+	}
+	public String getLeaveType() {
+		return leaveType;
+	}
+	public void setLeaveType(String leaveType) {
+		this.leaveType = leaveType;
+	}
+	
+
+	public Date getLeaveTo() {
+		return leaveTo;
+	}
+	public void setLeaveTo(Date leaveTo) {
+		this.leaveTo = leaveTo;
+	}
+	
+	public String getLeavedescription() {
+		return leavedescription;
+	}
+	public void setLeavedescription(String leavedescription) {
+		this.leavedescription = leavedescription;
+	}
 	
 
 }
