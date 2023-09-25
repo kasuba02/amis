@@ -126,7 +126,7 @@ public class OrderModel {
 			System.out.println("000000000000000in model list");
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				HolidayBean bean = new HolidayBean();
+				OrderBean bean = new OrderBean();
 				System.out.println("111111in model list");
 				bean.setId(rs.getLong(1));
 				bean.setEmpName(rs.getString(2));
@@ -135,12 +135,18 @@ public class OrderModel {
 				bean.setLeaveType(rs.getString(5));
 				System.out.println("222in model list");
 				bean.setLeaveTo(rs.getDate(6));
-				bean.setLeaveFrom(rs.getDate(7));
-				bean.setLeavedescription(rs.getString(8));
-				bean.setUserid(rs.getLong(9));
-				bean.setStatus(rs.getString(10));
+				bean.setLeavedescription(rs.getString(7));
+				bean.setOrder(rs.getLong(8));
+				bean.setItem(rs.getLong(9));
+				bean.setQty(rs.getLong(10));
+				bean.setUom(rs.getString(11));
+				bean.setCode(rs.getLong(12));
+				bean.setPrice(rs.getLong(13));
+				bean.setAmount(rs.getLong(14));
+				bean.setUserid(rs.getLong(15));
+				bean.setStatus(rs.getString(16));
 				System.out.println("23333in model list");
-				bean.setDepartment(rs.getString(11));
+				bean.setDepartment(rs.getString(17));
 				System.out.println("44444in model list");
 				list.add(bean);
 				System.out.println("end list");

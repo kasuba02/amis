@@ -22,6 +22,8 @@ public interface AMView {
 	public String APPROVE_LIST_CTL = APP_CONTEXT + "/approve";
 	public String REJECT_LIST_CTL = APP_CONTEXT + "/reject";
 	public String ORDER_CTL = APP_CONTEXT + "/order";
+	public String ORDER_LIST_CTL = APP_CONTEXT + "/orderlist";
+	public String ASSET_REGISTRATION_CTL = APP_CONTEXT + "/assetregistration";
 	
 	
 	//User Controller
@@ -52,4 +54,6 @@ public interface AMView {
 	public String HOLIDAY_LIST_VIEW = PAGE_FOLDER + "/holidaylist.jsp";
 	public String MANAGER_VIEW = PAGE_FOLDER + "/manager.jsp";
 	public String ORDER_VIEW = PAGE_FOLDER + "/order.jsp";
+	public String ORDER_LIST_VIEW = PAGE_FOLDER + "/orderlist.jsp";
+	public String ASSET_REGISTRATION_VIEW = PAGE_FOLDER + "/assetregistration.jsp";
 }

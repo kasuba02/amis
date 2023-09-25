@@ -12,7 +12,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: #607d8b;">
     © <%=Calendar.getInstance().get(Calendar.YEAR)%> Copyright:
-    <a class="text-dark" href="#">Asset Management System</a>
+    <a class="text-dark" href="#">Smart Zambia Asset Management Information System</a>
   </div>
   <!-- Copyright -->
 </footer>

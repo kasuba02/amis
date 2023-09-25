@@ -1,9 +1,16 @@
 <%@page import="com.amis.ms.Ctl.UserListCt"%>
-<%@page import="com.amis.ms.Utility.ServletUtility"%>
+<%@page import="com.amis.ms.Ctl.UserCtl"%>
 <%@page import="com.amis.ms.Bean.UserBean"%>
 <%@page import="com.amis.ms.Ctl.AMView"%>
 <%@page import="java.util.List"%>
+<%@page import="com.amis.ms.Ctl.AddUserCtl"%>
 
+
+<%@page import="com.amis.ms.Ctl.RegistrationCtl"%>
+<%@page import="com.amis.ms.Utility.ServletUtility"%>
+<%@page import="com.amis.ms.Utility.DataUtility"%>
+<%@page import="com.amis.ms.Utility.HTMLUtility"%>
+<%@page import="java.util.HashMap"%>
 <%@page import="java.util.Iterator"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -66,9 +73,8 @@
           <div class="top-navbar d-none d-xl-block">
             <ul class="navbar-nav align-items-center">
               <li class="nav-item">
-                <a class="nav-link" href="<%=AMView.ADMIN_CTL %>">Dashboard</a>
+                <a class="nav-link" href="index.html">Dashboard</a>
               </li>
-              <!--  
               <li class="nav-item">
                 <a class="nav-link" href="app-emailbox.html">Email</a>
               </li>
@@ -81,7 +87,6 @@
               <li class="nav-item d-none d-xxl-block">
                 <a class="nav-link" href="app-to-do.html">Todo</a>
               </li>
-              -->
             </ul>
           </div>
           <div class="search-toggle-icon d-xl-none ms-auto">
@@ -114,11 +119,11 @@
                 >
                   <div class="user-setting d-flex align-items-center gap-1">
                     <img
-                      src="assets/images/avatars/avatar.png"
+                      src="assets/images/avatars/avatar-1.png"
                       class="user-img"
                       alt=""
                     />
-                    <div class="user-name d-none d-sm-block">Admin</div>
+                    <div class="user-name d-none d-sm-block">Jhon Deo</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -133,10 +138,10 @@
                           height="60"
                         />
                         <div class="ms-3">
-                          <h6 class="mb-0 dropdown-user-name">Admin</h6>
+                          <h6 class="mb-0 dropdown-user-name">Jhon Deo</h6>
                           <small
                             class="mb-0 dropdown-user-designation text-secondary"
-                            >Smart Zambia</small
+                            >HR Manager</small
                           >
                         </div>
                       </div>
@@ -207,7 +212,7 @@
                   <li>
                     <a
                       class="dropdown-item"
-                      href="<%=AMView.WELCOME_CTL%>"
+                      href="authentication-signup-with-header-footer.html"
                     >
                       <div class="d-flex align-items-center">
                         <div class="setting-icon">
@@ -225,11 +230,9 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                 <!--  
                   <div class="projects">
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                   </div>
-                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                   <div class="row row-cols-3 gx-2">
@@ -351,17 +354,12 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                
-                <!--  
                   <div class="messages">
                     <span class="notify-badge">5</span>
                     <i class="bi bi-messenger"></i>
                   </div>
-                  
-                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
-                
                   <div class="p-2 border-bottom m-2">
                     <h5 class="h5 mb-0">Messages</h5>
                   </div>
@@ -602,14 +600,10 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                
-                <!--  
                   <div class="notifications">
                     <span class="notify-badge">8</span>
                     <i class="bi bi-bell-fill"></i>
                   </div>
-                  
-                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
                   <div class="p-2 border-bottom m-2">
@@ -865,7 +859,7 @@
             />
           </div>
           <div>
-            <h4 class="logo-text">SZI AMIS</h4>
+            <h4 class="logo-text">Skodash</h4>
           </div>
           <div class="toggle-icon ms-auto">
             <i class="bi bi-chevron-double-left"></i>
@@ -874,52 +868,76 @@
         <!--navigation-->
         <ul class="metismenu" id="menu">
           <li>
-            <a href="<%=AMView.ADMIN_CTL %>" class="has-arrow">
+            <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><i class="bi bi-house-door"></i></div>
               <div class="menu-title">Dashboard</div>
             </a>
-             <ul>
-                <li> <a href="index.html"><i class="bi bi-arrow-right-short"></i>Funiture and Fittings</a>
-                </li>
-                <li> <a href="index2.html"><i class="bi bi-arrow-right-short"></i>Motor Vehicle</a>
-                </li>
-                <li> <a href="index3.html"><i class="bi bi-arrow-right-short"></i>Plant and Equipment</a>
-                </li>
-                <li> <a href="index4.html"><i class="bi bi-arrow-right-short"></i>Buildings</a>
-                </li>
-                <li> <a href="index5.html"><i class="bi bi-arrow-right-short"></i>Office Equipment</a>
-                </li>
-              </ul>
+            <ul>
+              <li>
+                <a href="index.html"
+                  ><i class="bi bi-arrow-right-short"></i>eCommerce</a
+                >
+              </li>
+              <li>
+                <a href="index2.html"
+                  ><i class="bi bi-arrow-right-short"></i>Sales</a
+                >
+              </li>
+              <li>
+                <a href="index3.html"
+                  ><i class="bi bi-arrow-right-short"></i>Analytics</a
+                >
+              </li>
+              <li>
+                <a href="index4.html"
+                  ><i class="bi bi-arrow-right-short"></i>Project Management</a
+                >
+              </li>
+              <li>
+                <a href="index5.html"
+                  ><i class="bi bi-arrow-right-short"></i>CMS Dashboard</a
+                >
+              </li>
+            </ul>
           </li>
-         <li>
-              <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="bi bi-grid"></i>
-                </div>
-                <div class="menu-title">Settings</div>
-              </a>
-              <ul>
-              
-                 <li> <a href="<%=AMView.USER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Users</a>
-                </li>
-              
-                <li> <a href="<%=AMView.USER_CTL%>"><i class="bi bi-arrow-right-short"></i>Add User</a>
-                </li>
-                
-                
-                 <!-- 
-                <li> <a href="app-file-manager.html"><i class="bi bi-arrow-right-short"></i>File Manager</a>
-                </li>
-                <li> <a href="app-to-do.html"><i class="bi bi-arrow-right-short"></i>Todo List</a>
-                </li>
-                <li> <a href="app-invoice.html"><i class="bi bi-arrow-right-short"></i>Invoice</a>
-                </li>
-                <li> <a href="app-fullcalender.html"><i class="bi bi-arrow-right-short"></i>Calendar</a>
-                </li>
-                -->
-              </ul>
-            </li>
-            
-            <!--  
+          <li>
+            <a href="javascript:;" class="has-arrow">
+              <div class="parent-icon"><i class="bi bi-grid"></i></div>
+              <div class="menu-title">Application</div>
+            </a>
+            <ul>
+              <li>
+                <a href="app-emailbox.html"
+                  ><i class="bi bi-arrow-right-short"></i>Email</a
+                >
+              </li>
+              <li>
+                <a href="app-chat-box.html"
+                  ><i class="bi bi-arrow-right-short"></i>Chat Box</a
+                >
+              </li>
+              <li>
+                <a href="app-file-manager.html"
+                  ><i class="bi bi-arrow-right-short"></i>File Manager</a
+                >
+              </li>
+              <li>
+                <a href="app-to-do.html"
+                  ><i class="bi bi-arrow-right-short"></i>Todo List</a
+                >
+              </li>
+              <li>
+                <a href="app-invoice.html"
+                  ><i class="bi bi-arrow-right-short"></i>Invoice</a
+                >
+              </li>
+              <li>
+                <a href="app-fullcalender.html"
+                  ><i class="bi bi-arrow-right-short"></i>Calendar</a
+                >
+              </li>
+            </ul>
+          </li>
           <li class="menu-label">UI Elements</li>
           <li>
             <a href="javascript:;" class="has-arrow">
@@ -1370,163 +1388,273 @@
       <main class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        
-        <!--  
           <div class="breadcrumb-title pe-3">Tables</div>
-          -->
-          
-          <!--  -->
           <div class="ps-3">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb mb-0 p-0">
                 <li class="breadcrumb-item">
-                <!--  
                   <a href="javascript:;"><i class="bx bx-home-alt"></i></a>
-                  -->
                 </li>
-                <!--  
                 <li class="breadcrumb-item active" aria-current="page">
                   Advance Tables
                 </li>
-                -->
               </ol>
             </nav>
           </div>
-          
           <div class="ms-auto">
-          
-          <!--  
             <div class="btn-group">
-            <li><a href="<%=AMView.USERADD_CTL%>" >
-              <button type="button" class="btn btn-primary" >Add User</button>
-              </a>
-              </li>
+              <button type="button" class="btn btn-primary">Settings</button>
+              <button
+                type="button"
+                class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split"
+                data-bs-toggle="dropdown"
+              >
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"
+              >
+                <a class="dropdown-item" href="javascript:;">Action</a>
+                <a class="dropdown-item" href="javascript:;">Another action</a>
+                <a class="dropdown-item" href="javascript:;"
+                  >Something else here</a
+                >
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:;">Separated link</a>
+              </div>
             </div>
-            -->
           </div>
         </div>
         <!--end breadcrumb-->
-
-        <div class="card">
-          <div class="card-body">
-            <div class="d-flex align-items-center">
-              <h5 class="mb-0">User Details</h5>
-              <form class="ms-auto position-relative" action="<%=AMView.USER_LIST_CTL%>" 
-              method="">
-                <div
-                  class="position-absolute top-50 translate-middle-y search-icon px-3"
-                >
-                  <i class="bi bi-search"></i>
-                </div>
-                <input
-                  class="form-control ps-5"
-                  type="text"
-                  placeholder="search" name="theSearchName"
-                />
-              </form>
-        <form action="<%=AMView.USER_LIST_CTL%>" method="post">
         
-            </div>
-            <div class="table-responsive mt-3">
-              <table class="table align-middle">
-                <thead class="table-secondary">
-                  <tr>
-                    <th>#</th>
-                    <th>FirstName</th>
-                    <th>LastName</th>
-                    <th>Email</th>
-                    <th>PhoneNo</th>
-                    <th>Department</th>
-                    <th>Rolename</th>
-                    <th>Actions</th>
-                  </tr>
-                  
-                </thead>
-                <%
-				int index = 1;
-				List list = ServletUtility.getList(request);
-				Iterator it = list.iterator();
-				while (it.hasNext()) {
-					UserBean bean = (UserBean) it.next();
-			%>
-                <tbody>
-                
-                  <tr>
-                    <td><%=bean.getId()%></td>
-                    <td>
-                      <div
-                        class="d-flex align-items-center gap-3 cursor-pointer"
-                      >
-                      <!-- <img
-                          src="assets/images/avatars/avatar-1.png"
-                          class="rounded-circle"
-                          width="44"
-                          height="44"
-                          alt=""
-                        /> -->
-                        
-                        <div class="">
-                          <%=bean.getFirstName()%>
-                        </div>
-                      </div>
-                    </td>
-                    <td><%=bean.getLastName()%></td>
-                    <td><%=bean.getEmail()%></td>
-                    <td><%=bean.getPhoneNo()%></td>
-                    <td><%=bean.getDepartment()%></td>
-                    <%
-					if (bean.getRolename().equalsIgnoreCase("ADMIN")) {
-				%>
-				<td>-------</td>
+        <!-- Add User -->
 
-				<%
-					} else {
-				%>
-				<td><%=bean.getRolename()%></td>
-                    <td>
-                      <div
-                        class="table-actions d-flex align-items-center gap-3 fs-6"
-                      >
-                        <a
-                          href="<%=AMView.USER_CTL%>?id=<%=bean.getId()%>"
-                          class="text-primary"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Views"
-                          ><i class="bi bi-eye-fill"></i
-                        ></a>
-                        <a
-                          href="<%=AMView.USER_CTL%>?id=<%=bean.getId()%>"
-                          class="text-warning"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Edit"
-                          ><i class="bi bi-pencil-fill"></i
-                        ></a>
-                        <a
-                          href="<%=AMView.USER_LIST_CTL%>?id=<%=bean.getId()%>"
-                          class="text-danger"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Delete"
-                          ><i class="bi bi-trash-fill"></i
-                        ></a>
-                      </div>
-                    </td>
-                 		<%
-			}
-		%>
-                  </tr>
-                  <%
-				}
-                  %>
-                </tbody>
-              </table>
-              </form>
-            </div>
-          </div>
-        </div>
+   <div class="container mt-5">
+	<h3 class="text-center mt-5">Asset Register</h3>
+	<form action="<%=AMView.USER_REGISTRATION_CTL%>" method="post">
+<h4 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h4>
+	<h4 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h4>
+	
+		<jsp:useBean id="bean" scope="request"
+			class="com.amis.ms.Bean.UserBean" />
+		<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
+			type="hidden" name="createdBy" value="<%=bean.getCreatedby()%>">
+		<input type="hidden" name="modifiedBy"
+			value="<%=bean.getModifiedby()%>"> <input type="hidden"
+			name="createdDatetime" value="<%=bean.getCreatedatetime()%>">
+		<input type="hidden" name="modifiedDateTime"
+			value="<%=bean.getModifieddatetime()%>">
 
+
+
+		<div class="container mt-5">
+		  <div class="row h-100 justify-content-center align-items-center">
+			<div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Asset Description
+					</label> <input type="text" name="firstName" class="form-control "
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			
+			
+			
+			
+			
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("firstName", request)%></div>
+	
+			
+			<%
+						HashMap<String, String> map = new HashMap<String, String>();
+						map.put("Office Equipment", "Office Equipment");
+						map.put("Funiture", "Funiture");
+						map.put("Fittings", "Fittings");
+						map.put("Buildings", "Buildings");
+						map.put("Motor Vehicle", "Motor Vehicle");
+						map.put("Plant and Equipment", "Plant and Equipment");
+					%>
+					
+					
+					
+					<!-- 
+					
+					
+					
+					 -->
+
+					<div class="col-6">
+						<label class="form-label">Asset Category</label>
+						<%=HTMLUtility.getList("department", String.valueOf(bean.getDepartment()), map)%>
+						</div>
+						
+						
+						
+						<div class="col-6" style="margin-left:10px;">
+						<label class="form-label">Department</label>
+						<select name="role" class="form-control">
+						 <option >---Select---</option>
+						 <option value="2">Human Resource</option>
+						<option value="3">Standards</option> 
+						<option value="4">Infrastructure</option>
+						<option value="5">Procurement</option> 
+						<option value="5">Accounts</option> 
+						<option value="5">Systems Development</option>
+						<option value="5">Digital Services</option>
+						
+						 </select>
+						</div>
+						
+	<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("department", request)%></div>
+			
+			
+					<div class="col-6">
+				<label for="exampleInputEmail1" class="form-label"></label>
+				<input type="text" name="lastName" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("lastName", request)%></div>
+			<div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Quantity</label> <input
+					type="text" name="email" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("email", request)%></div>
+			<div class="col-6">
+				<label for="exampleInputPassword1" class="form-label">Date Acquisition</label>
+				<input type="password" name="password" class="form-control"
+					id="exampleInputPassword1">
+			</div>
+
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("password", request)%></div>
+			<div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">GRZ#</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			<div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">IFMIS Number</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+
+
+            <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Serial Number</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+           
+            <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Location</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+           
+           
+           
+            <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Plot Number</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+           
+           
+            <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Capitalization Amount</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+           
+           
+            <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Asset Status</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			
+			 <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Revaluation Amount</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			 <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Fair Value</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			
+			 <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Estimated Useful Life</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			
+			
+			 <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Disposal Date</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			
+			 <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Disposal Price</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			
+			 <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Disposal Type</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			
+			 <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Depreciation</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			
+			 <div class="col-6">
+				<label for="exampleInputEmail1" class="form-label">Net Book Value</label> <input
+					type="text" name="phoneNo" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+			
+			
+<br>
+			<div class="container text-center">
+				<input type="submit" class="btn btn-primary" name="operation"
+					value="<%=RegistrationCtl.OP_SAVE%>">
+			</div>
+			</div>
+		</div>
+	</form>
+<br>
+
+</div>
+      
        
       </main>
       <!--end page main-->

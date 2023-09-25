@@ -71,6 +71,7 @@
               <li class="nav-item">
               <a class="nav-link" href="index.html">Dashboard</a>
               </li>
+              <!-- 
               <li class="nav-item">
               <a class="nav-link" href="app-emailbox.html">Email</a>
               </li>
@@ -83,6 +84,7 @@
               <li class="nav-item d-none d-xxl-block">
               <a class="nav-link" href="app-to-do.html">Todo</a>
               </li>
+              -->
             </ul>
             </div>
             <div class="search-toggle-icon d-xl-none ms-auto">
@@ -157,7 +159,7 @@
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
-                      <a class="dropdown-item" href="authentication-signup-with-header-footer.html">
+                      <a class="dropdown-item" href="<%=AMView.WELCOME_CTL%>">
                          <div class="d-flex align-items-center">
                            <div class="setting-icon"><i class="bi bi-lock-fill"></i></div>
                            <div class="setting-text ms-3"><span>Logout</span></div>
@@ -168,9 +170,12 @@
               </li>
               <li class="nav-item dropdown dropdown-large">
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                 
+                 <!--  
                   <div class="projects">
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                   </div>
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                    <div class="row row-cols-3 gx-2">
@@ -269,10 +274,13 @@
               </li>
               <li class="nav-item dropdown dropdown-large">
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                 
+                 <!--  
                   <div class="messages">
                     <span class="notify-badge">5</span>
                     <i class="bi bi-messenger"></i>
                   </div>
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
                   <div class="p-2 border-bottom m-2">
@@ -377,15 +385,22 @@
               </li>
               <li class="nav-item dropdown dropdown-large d-none d-sm-block">
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                
+                <!--  
                   <div class="notifications">
                     <span class="notify-badge">8</span>
                     <i class="bi bi-bell-fill"></i>
                   </div>
+                  
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
+                  
+                  
                   <div class="p-2 border-bottom m-2">
                       <h5 class="h5 mb-0">Notifications</h5>
                   </div>
+                  
                   <div class="header-notifications-list p-2">
                      <div class="dropdown-item bg-light radius-10 mb-1">
                       <form class="dropdown-searchbar position-relative">
@@ -528,15 +543,15 @@
                 <div class="menu-title">Dashboard</div>
               </a>
               <ul>
-                <li> <a href="index.html"><i class="bi bi-arrow-right-short"></i>eCommerce</a>
+                <li> <a href="index.html"><i class="bi bi-arrow-right-short"></i>Funiture and Fittings</a>
                 </li>
-                <li> <a href="index2.html"><i class="bi bi-arrow-right-short"></i>Sales</a>
+                <li> <a href="index2.html"><i class="bi bi-arrow-right-short"></i>Motor Vehicle</a>
                 </li>
-                <li> <a href="index3.html"><i class="bi bi-arrow-right-short"></i>Analytics</a>
+                <li> <a href="index3.html"><i class="bi bi-arrow-right-short"></i>Plant and Equipment</a>
                 </li>
-                <li> <a href="index4.html"><i class="bi bi-arrow-right-short"></i>Project Management</a>
+                <li> <a href="index4.html"><i class="bi bi-arrow-right-short"></i>Buildings</a>
                 </li>
-                <li> <a href="index5.html"><i class="bi bi-arrow-right-short"></i>CMS Dashboard</a>
+                <li> <a href="index5.html"><i class="bi bi-arrow-right-short"></i>Office Equipment</a>
                 </li>
               </ul>
             </li>
@@ -544,13 +559,18 @@
               <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bi bi-grid"></i>
                 </div>
-                <div class="menu-title">Application</div>
+                <div class="menu-title">Settings</div>
               </a>
               <ul>
-                <li> <a href="app-emailbox.html"><i class="bi bi-arrow-right-short"></i>Email</a>
+              
+                 <li> <a href="<%=AMView.USER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Users</a>
                 </li>
-                <li> <a href="app-chat-box.html"><i class="bi bi-arrow-right-short"></i>Chat Box</a>
+              
+                <li> <a href="<%=AMView.USER_CTL%>"><i class="bi bi-arrow-right-short"></i>Add User</a>
                 </li>
+                
+                
+                 <!-- 
                 <li> <a href="app-file-manager.html"><i class="bi bi-arrow-right-short"></i>File Manager</a>
                 </li>
                 <li> <a href="app-to-do.html"><i class="bi bi-arrow-right-short"></i>Todo List</a>
@@ -559,8 +579,11 @@
                 </li>
                 <li> <a href="app-fullcalender.html"><i class="bi bi-arrow-right-short"></i>Calendar</a>
                 </li>
+                -->
               </ul>
             </li>
+            
+            <!--  
             <li class="menu-label">SZI Assets</li>
             <li>
               <a href="javascript:;" class="has-arrow">
@@ -841,9 +864,12 @@
                   <div class="card-body">
                       <div class="d-flex align-items-center">
                           <div>
-                              <p class="mb-0 text-secondary">Total Orders</p>
+                              <p class="mb-0 text-secondary">Funiture and Fittings</p>
                               <h4 class="my-1">4805</h4>
+                              <!--
                               <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 5% from last week</p>
+                                -->
+                              
                           </div>
                           <div class="widget-icon-large bg-gradient-purple text-white ms-auto"><i class="bi bi-basket2-fill"></i>
                           </div>
@@ -856,9 +882,14 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div>
-                                <p class="mb-0 text-secondary">Total Laptops In Stock</p>
-                                <h4 class="my-1">$24K</h4>
+                                <p class="mb-0 text-secondary">Motor Vehicle</p>
+                                <h4 class="my-1">100</h4>
+                                
+                                <!-- 
+                                
+                                 
                                 <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 4.6 from last week</p>
+                                -->
                             </div>
                             <div class="widget-icon-large bg-gradient-success text-white ms-auto"><i class="bi bi-currency-exchange"></i>
                             </div>
@@ -871,9 +902,12 @@
                   <div class="card-body">
                       <div class="d-flex align-items-center">
                           <div>
-                              <p class="mb-0 text-secondary">Total Laptops Issued</p>
-                              <h4 class="my-1">5.8K</h4>
-                              <p class="mb-0 font-13 text-danger"><i class="bi bi-caret-down-fill"></i> 2.7 from last week</p>
+                              <p class="mb-0 text-secondary">Plant and Equipment</p>
+                              <h4 class="my-1">110</h4>
+                              <!-- 
+                              
+                             <p class="mb-0 font-13 text-danger"><i class="bi bi-caret-down-fill"></i> 2.7 from last week</p>
+                             -->
                           </div>
                           <div class="widget-icon-large bg-gradient-danger text-white ms-auto"><i class="bi bi-people-fill"></i>
                           </div>
@@ -886,9 +920,13 @@
                   <div class="card-body">
                       <div class="d-flex align-items-center">
                           <div>
-                              <p class="mb-0 text-secondary">Depreciated Assets</p>
-                              <h4 class="my-1">38.15%</h4>
+                              <p class="mb-0 text-secondary">Buildings</p>
+                              <h4 class="my-1">38</h4>
+                              
+                              <!--  
+                              
                               <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 12.2% from last week</p>
+                              -->
                           </div>
                           <div class="widget-icon-large bg-gradient-info text-white ms-auto"><i class="bi bi-bar-chart-line-fill"></i>
                           </div>
@@ -905,9 +943,11 @@
                   <div class="card-body">
                       <div class="d-flex align-items-center">
                           <div>
-                              <p class="mb-0 text-secondary">Total Orders</p>
-                              <h4 class="my-1">4805</h4>
+                              <p class="mb-0 text-secondary">Office Equipment</p>
+                              <h4 class="my-1">480</h4>
+                              <!--  
                               <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 5% from last week</p>
+                              -->
                           </div>
                           <div class="widget-icon-large bg-gradient-purple text-white ms-auto"><i class="bi bi-basket2-fill"></i>
                           </div>
@@ -915,6 +955,8 @@
                   </div>
                 </div>
                </div>
+               
+                <!--  
                <div class="col">
                   <div class="card radius-10">
                     <div class="card-body">
@@ -960,8 +1002,12 @@
                   </div>
                 </div>
                </div>
+               -->
             </div><!--end row-->
-
+            
+            
+            
+<!-- 
             <div class="row">
               <div class="col-12 col-lg-8 col-xl-8 d-flex">
                 <div class="card radius-10 w-100">
@@ -1023,7 +1069,8 @@
                 </div>
               </div>
             </div><!--end row-->
-
+            
+              <!--  
             <div class="row">
                <div class="col-12 col-lg-6 col-xl-6 d-flex">
                 <div class="card radius-10 w-100">

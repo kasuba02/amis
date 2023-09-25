@@ -52,7 +52,10 @@
 				if (userBean.getRoleid() == 1) {
 			%>
 
-<li class="nav-item dropdown" style="font-family: cursive;"><a
+     <!-- 
+     
+     
+     <li class="nav-item dropdown" style="font-family: cursive;"><a
 				class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
 				role="button" aria-expanded="false"> User</a>
 				<ul class="dropdown-menu">
@@ -70,6 +73,12 @@
 					<li><a class="dropdown-item"
 						href="<%=AMView.APPROVE_LIST_CTL%>"> Holiday List </a></li>
 				</ul></li>
+     
+     
+     
+     
+      -->
+
 
 			<%
 				} else if (userBean.getRoleid() == 2) {
@@ -105,7 +114,7 @@
 		<ul class="nav justify-content-end" style="font-family: cursive;">
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-				role="button" aria-expanded="false" style="margin-left: 10px;">Guest</a>
+				role="button" aria-expanded="false" style="margin-left: 10px;">LogIn</a>
 				<ul class="dropdown-menu">
 					<li><a class="dropdown-item" href="<%=AMView.LOGIN_CTL%>">SingIn</a></li>
 					<li><a class="dropdown-item"

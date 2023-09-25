@@ -119,11 +119,11 @@
                 >
                   <div class="user-setting d-flex align-items-center gap-1">
                     <img
-                      src="assets/images/avatars/avatar-1.png"
+                      src="assets/images/avatars/avatar.png"
                       class="user-img"
                       alt=""
                     />
-                    <div class="user-name d-none d-sm-block">Jhon Deo</div>
+                    <div class="user-name d-none d-sm-block">Admin</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -131,17 +131,17 @@
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
                         <img
-                          src="assets/images/avatars/avatar-1.png"
+                          src="assets/images/avatars/avatar.png"
                           alt=""
                           class="rounded-circle"
                           width="60"
                           height="60"
                         />
                         <div class="ms-3">
-                          <h6 class="mb-0 dropdown-user-name">Jhon Deo</h6>
+                          <h6 class="mb-0 dropdown-user-name">Admin</h6>
                           <small
                             class="mb-0 dropdown-user-designation text-secondary"
-                            >HR Manager</small
+                            >Smart Zambia</small
                           >
                         </div>
                       </div>
@@ -859,7 +859,7 @@
             />
           </div>
           <div>
-            <h4 class="logo-text">Skodash</h4>
+            <h4 class="logo-text">SZI AMIS</h4>
           </div>
           <div class="toggle-icon ms-auto">
             <i class="bi bi-chevron-double-left"></i>
@@ -1429,8 +1429,8 @@
         
         <!-- Add User -->
 
-    <div class="container mt-5">
-	<h3 class="text-center mt-5">Register User</h3>
+  <div class="container mt-5">
+	<h3 class="text-center mt-5">Registration</h3>
 	<form action="<%=AMView.USER_REGISTRATION_CTL%>" method="post">
 <h4 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h4>
 	<h4 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h4>
@@ -1499,9 +1499,9 @@
 						<label class="form-label">Role</label>
 						<select name="role" class="form-control">
 						 <option >---Select---</option>
-						 <option value="2">Stock V Officer</option>
+						 <option value="2">Stores Officer</option>
 						<option value="3">Procurement Officer</option> 
-						<option value="4">Manager Accounts</option>
+						<option value="4">Head Of Accounts</option>
 						<option value="5">Manager Procurement</option> 
 						 </select>
 						</div>

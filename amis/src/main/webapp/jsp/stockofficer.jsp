@@ -562,15 +562,15 @@
                 </li>
               </ul>
             </li>
-            <li class="menu-label">UI Elements</li>
+            <li class="menu-label"></li>ASSET REGISTRATION
             <li>
               <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bi bi-award"></i>
                 </div>
-                <div class="menu-title">Widgets</div>
+                <div class="menu-title">Asset Registration</div>
               </a>
               <ul>
-                <li> <a href="widgets-static-widgets.html"><i class="bi bi-arrow-right-short"></i>Static Widgets</a>
+                <li> <a href="<%=AMView.ASSET_REGISTRATION_CTL%>"><i class="bi bi-arrow-right-short"></i>Register Asset</a>
                 </li>
                 <li> <a href="widgets-data-widgets.html"><i class="bi bi-arrow-right-short"></i>Data Widgets</a>
                 </li>

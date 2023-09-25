@@ -574,7 +574,7 @@
               <ul>
                 <li> <a href="<%=AMView.ORDER_CTL%>"><i class="bi bi-arrow-right-short"></i>Make Order</a>
                 </li>
-                <li> <a href="widgets-data-widgets.html"><i class="bi bi-arrow-right-short"></i>Data Widgets</a>
+                <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Orders</a>
                 </li>
               </ul>
             </li>

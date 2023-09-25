@@ -85,9 +85,9 @@
 						<label class="form-label">Role</label>
 						<select name="role" class="form-control">
 						 <option >---Select---</option>
-						 <option value="2">Stock V Officer</option>
+						 <option value="2">Stores Officer</option>
 						<option value="3">Procurement Officer</option> 
-						<option value="4">Manager Accounts</option>
+						<option value="4">Head Of Accounts</option>
 						<option value="5">Manager Procurement</option> 
 						 </select>
 						</div>

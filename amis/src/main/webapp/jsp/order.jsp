@@ -1468,10 +1468,8 @@
 				
 				<%
 						HashMap<String, String> map1 = new HashMap<String, String>();
-						map1.put("Manager", "Manager");
-						map1.put("HR Department", "HR Department");
-						map1.put("Research and development Department", "Research and development Department");
-						map1.put("IT services Department", "IT services Department");
+				map1.put("Procurement", "Procurement");
+				map1.put("Accounts", "Accounts");
 					%>
 
 					<div class="col-6">

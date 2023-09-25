@@ -74,12 +74,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Dashboard</a>
               </li>
+              
+              <!--  
               <li class="nav-item">
                 <a class="nav-link" href="app-emailbox.html">Email</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="javascript:;">Projects</a>
               </li>
+              -->
               <li class="nav-item d-none d-xxl-block">
                 <a class="nav-link" href="javascript:;">Events</a>
               </li>
@@ -118,11 +121,11 @@
                 >
                   <div class="user-setting d-flex align-items-center gap-1">
                     <img
-                      src="assets/images/avatars/avatar-1.png"
+                      src="assets/images/avatars/avatar.png"
                       class="user-img"
                       alt=""
                     />
-                    <div class="user-name d-none d-sm-block">Jhon Deo</div>
+                    <div class="user-name d-none d-sm-block">Admin</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -130,17 +133,17 @@
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
                         <img
-                          src="assets/images/avatars/avatar-1.png"
+                          src="assets/images/avatars/avatar.png"
                           alt=""
                           class="rounded-circle"
                           width="60"
                           height="60"
                         />
                         <div class="ms-3">
-                          <h6 class="mb-0 dropdown-user-name">Jhon Deo</h6>
+                          <h6 class="mb-0 dropdown-user-name">Admin</h6>
                           <small
                             class="mb-0 dropdown-user-designation text-secondary"
-                            >HR Manager</small
+                            >Smart Zambia</small
                           >
                         </div>
                       </div>
@@ -159,6 +162,7 @@
                       </div>
                     </a>
                   </li>
+                  <!--  
                   <li>
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
@@ -207,6 +211,7 @@
                       </div>
                     </a>
                   </li>
+                  -->
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a
@@ -229,9 +234,12 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
+                
+                <!--  
                   <div class="projects">
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                   </div>
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                   <div class="row row-cols-3 gx-2">
@@ -353,10 +361,12 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
+                <!-- 
                   <div class="messages">
                     <span class="notify-badge">5</span>
                     <i class="bi bi-messenger"></i>
                   </div>
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
                   <div class="p-2 border-bottom m-2">
@@ -599,10 +609,14 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
+                
+                <!--  
                   <div class="notifications">
                     <span class="notify-badge">8</span>
                     <i class="bi bi-bell-fill"></i>
                   </div>
+                  
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
                   <div class="p-2 border-bottom m-2">
@@ -858,7 +872,7 @@
             />
           </div>
           <div>
-            <h4 class="logo-text">Skodash</h4>
+            <h4 class="logo-text">SZI AMIS</h4>
           </div>
           <div class="toggle-icon ms-auto">
             <i class="bi bi-chevron-double-left"></i>
@@ -900,42 +914,34 @@
             </ul>
           </li>
           <li>
-            <a href="javascript:;" class="has-arrow">
-              <div class="parent-icon"><i class="bi bi-grid"></i></div>
-              <div class="menu-title">Application</div>
-            </a>
-            <ul>
-              <li>
-                <a href="app-emailbox.html"
-                  ><i class="bi bi-arrow-right-short"></i>Email</a
-                >
-              </li>
-              <li>
-                <a href="app-chat-box.html"
-                  ><i class="bi bi-arrow-right-short"></i>Chat Box</a
-                >
-              </li>
-              <li>
-                <a href="app-file-manager.html"
-                  ><i class="bi bi-arrow-right-short"></i>File Manager</a
-                >
-              </li>
-              <li>
-                <a href="app-to-do.html"
-                  ><i class="bi bi-arrow-right-short"></i>Todo List</a
-                >
-              </li>
-              <li>
-                <a href="app-invoice.html"
-                  ><i class="bi bi-arrow-right-short"></i>Invoice</a
-                >
-              </li>
-              <li>
-                <a href="app-fullcalender.html"
-                  ><i class="bi bi-arrow-right-short"></i>Calendar</a
-                >
-              </li>
-            </ul>
+              <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bi bi-grid"></i>
+                </div>
+                <div class="menu-title">Settings</div>
+              </a>
+              <ul>
+              
+                 <li> <a href="<%=AMView.USER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Users</a>
+                </li>
+              
+                <li> <a href="<%=AMView.USER_CTL%>"><i class="bi bi-arrow-right-short"></i>Add User</a>
+                </li>
+                
+                
+                 <!-- 
+                <li> <a href="app-file-manager.html"><i class="bi bi-arrow-right-short"></i>File Manager</a>
+                </li>
+                <li> <a href="app-to-do.html"><i class="bi bi-arrow-right-short"></i>Todo List</a>
+                </li>
+                <li> <a href="app-invoice.html"><i class="bi bi-arrow-right-short"></i>Invoice</a>
+                </li>
+                <li> <a href="app-fullcalender.html"><i class="bi bi-arrow-right-short"></i>Calendar</a>
+                </li>
+                -->
+              </ul>
+            </li>
+            
+            <!--  
           </li>
           <li class="menu-label">UI Elements</li>
           <li>
@@ -1387,7 +1393,11 @@
       <main class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+        <!--  
           <div class="breadcrumb-title pe-3">Tables</div>
+          -->
+          
+          <!--  
           <div class="ps-3">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb mb-0 p-0">
@@ -1400,6 +1410,9 @@
               </ol>
             </nav>
           </div>
+          -->
+          
+          <!--  
           <div class="ms-auto">
             <div class="btn-group">
               <button type="button" class="btn btn-primary">Settings</button>
@@ -1423,6 +1436,7 @@
               </div>
             </div>
           </div>
+          -->
         </div>
         <!--end breadcrumb-->
         
