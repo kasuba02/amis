@@ -75,7 +75,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Dashboard</a>
               </li>
-              <!--  
               <li class="nav-item">
                 <a class="nav-link" href="app-emailbox.html">Email</a>
               </li>
@@ -88,14 +87,11 @@
               <li class="nav-item d-none d-xxl-block">
                 <a class="nav-link" href="app-to-do.html">Todo</a>
               </li>
-              -->
             </ul>
           </div>
           <div class="search-toggle-icon d-xl-none ms-auto">
             <i class="bi bi-search"></i>
           </div>
-          
-          
           <form class="searchbar d-none d-xl-flex ms-auto">
             <div
               class="position-absolute top-50 translate-middle-y search-icon ms-3"
@@ -113,8 +109,6 @@
               <i class="bi bi-x-lg"></i>
             </div>
           </form>
-          
-          
           <div class="top-navbar-right ms-3">
             <ul class="navbar-nav align-items-center">
               <li class="nav-item dropdown dropdown-large">
@@ -125,11 +119,11 @@
                 >
                   <div class="user-setting d-flex align-items-center gap-1">
                     <img
-                      src="assets/images/avatars/avatar.png"
+                      src="assets/images/avatars/avatar-1.png"
                       class="user-img"
                       alt=""
                     />
-                    <div class="user-name d-none d-sm-block">Procurement Officer</div>
+                    <div class="user-name d-none d-sm-block">Jhon Deo</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -137,17 +131,17 @@
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
                         <img
-                          src="assets/images/avatars/avatar.png"
+                          src="assets/images/avatars/avatar-1.png"
                           alt=""
                           class="rounded-circle"
                           width="60"
                           height="60"
                         />
                         <div class="ms-3">
-                          <h6 class="mb-0 dropdown-user-name">Procurement Officer</h6>
+                          <h6 class="mb-0 dropdown-user-name">Jhon Deo</h6>
                           <small
                             class="mb-0 dropdown-user-designation text-secondary"
-                            >Smart Zambia</small
+                            >HR Manager</small
                           >
                         </div>
                       </div>
@@ -166,8 +160,6 @@
                       </div>
                     </a>
                   </li>
-                  
-                  <!-- 
                   <li>
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
@@ -216,7 +208,6 @@
                       </div>
                     </a>
                   </li>
-                  -->
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a
@@ -239,12 +230,9 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                
-                <!-- 
                   <div class="projects">
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                   </div>
-                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                   <div class="row row-cols-3 gx-2">
@@ -366,13 +354,10 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                
-                  <!-- 
                   <div class="messages">
                     <span class="notify-badge">5</span>
                     <i class="bi bi-messenger"></i>
                   </div>
-                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
                   <div class="p-2 border-bottom m-2">
@@ -615,13 +600,10 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                
-                <!--  
                   <div class="notifications">
                     <span class="notify-badge">8</span>
                     <i class="bi bi-bell-fill"></i>
                   </div>
-                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
                   <div class="p-2 border-bottom m-2">
@@ -877,15 +859,13 @@
             />
           </div>
           <div>
-            <h4 class="logo-text">SZI AMIS</h4>
+            <h4 class="logo-text">Skodash</h4>
           </div>
           <div class="toggle-icon ms-auto">
             <i class="bi bi-chevron-double-left"></i>
           </div>
         </div>
         <!--navigation-->
-        
-        <!--  
         <ul class="metismenu" id="menu">
           <li>
             <a href="javascript:;" class="has-arrow">
@@ -1400,7 +1380,6 @@
             </a>
           </li>
         </ul>
-        -->
         <!--end navigation-->
       </aside>
       <!--end sidebar -->
@@ -1409,12 +1388,7 @@
       <main class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        
-        <!--  
-        
           <div class="breadcrumb-title pe-3">Tables</div>
-          
-         
           <div class="ps-3">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb mb-0 p-0">
@@ -1427,9 +1401,6 @@
               </ol>
             </nav>
           </div>
-          -->
-          <!-- 
-          
           <div class="ms-auto">
             <div class="btn-group">
               <button type="button" class="btn btn-primary">Settings</button>
@@ -1453,8 +1424,6 @@
               </div>
             </div>
           </div>
-          -->
-          
         </div>
         <!--end breadcrumb-->
         
@@ -1480,8 +1449,6 @@
 
 		<div class="container mt-5">
 		  <div class="row h-100 justify-content-center align-items-center">
-		  
-		  
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Asset Description
 					</label> <input type="text" name="firstName" class="form-control "
@@ -1550,8 +1517,6 @@
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("email", request)%></div>
-			
-			<!--  
 			<div class="col-6">
 				<label for="exampleInputPassword1" class="form-label">Date Acquisition</label>
 				<input type="password" name="password" class="form-control"
@@ -1559,27 +1524,20 @@
 			</div>
 
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("password", request)%></div>
-			
-			-->
-			
-			<!--  
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">GRZ#</label> <input
 					type="text" name="phoneNo" class="form-control"
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			-->
-			
 			
 			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">IFMIS Asset Number</label> <input
+				<label for="exampleInputEmail1" class="form-label">IFMIS Number</label> <input
 					type="text" name="phoneNo" class="form-control"
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-              
-             <!-- 
+
 
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Serial Number</label> <input
@@ -1587,10 +1545,7 @@
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-           -->
            
-           
-           <!--  
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Location</label> <input
 					type="text" name="phoneNo" class="form-control"
@@ -1598,9 +1553,7 @@
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
            
-           -->
            
-           <!-- 
            
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Plot Number</label> <input
@@ -1608,9 +1561,7 @@
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-           -->
            
-           <!--  
            
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Capitalization Amount</label> <input
@@ -1618,9 +1569,7 @@
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-           -->
            
-           <!--  
            
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Asset Status</label> <input
@@ -1629,9 +1578,7 @@
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
 			
-			-->
 			
-			<!--  
 			 <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Revaluation Amount</label> <input
 					type="text" name="phoneNo" class="form-control"
@@ -1694,14 +1641,7 @@
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			-->
 			
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">IFMIS Purchase Order Date</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
 			
 <br>
 			<div class="container text-center">

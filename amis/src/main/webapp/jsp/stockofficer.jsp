@@ -71,6 +71,7 @@
               <li class="nav-item">
               <a class="nav-link" href="index.html">Dashboard</a>
               </li>
+              <!-- 
               <li class="nav-item">
               <a class="nav-link" href="app-emailbox.html">Email</a>
               </li>
@@ -83,6 +84,7 @@
               <li class="nav-item d-none d-xxl-block">
               <a class="nav-link" href="app-to-do.html">Todo</a>
               </li>
+              -->
             </ul>
             </div>
             <div class="search-toggle-icon d-xl-none ms-auto">
@@ -98,17 +100,17 @@
               <li class="nav-item dropdown dropdown-large">
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
                   <div class="user-setting d-flex align-items-center gap-1">
-                    <img src="assets/images/avatars/avatar-1.png" class="user-img" alt="">
-                    <div class="user-name d-none d-sm-block">Stock V Officer</div>
+                    <img src="assets/images/avatars/avatar.png" class="user-img" alt="">
+                    <div class="user-name d-none d-sm-block">Stores Officer</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li>
                      <a class="dropdown-item" href="#">
                        <div class="d-flex align-items-center">
-                          <img src="assets/images/avatars/avatar-1.png" alt="" class="rounded-circle" width="60" height="60">
+                          <img src="assets/images/avatars/avatar.png" alt="" class="rounded-circle" width="60" height="60">
                           <div class="ms-3">
-                            <h6 class="mb-0 dropdown-user-name">Stock V Officer</h6>
+                            <h6 class="mb-0 dropdown-user-name">Stores Officer</h6>
                             <small class="mb-0 dropdown-user-designation text-secondary">Smart Zambia</small>
                           </div>
                        </div>
@@ -123,6 +125,8 @@
                          </div>
                        </a>
                     </li>
+                    
+                    <!-- 
                     <li>
                       <a class="dropdown-item" href="#">
                          <div class="d-flex align-items-center">
@@ -155,9 +159,10 @@
                          </div>
                        </a>
                     </li>
+                    -->
                     <li><hr class="dropdown-divider"></li>
                     <li>
-                      <a class="dropdown-item" href="authentication-signup-with-header-footer.html">
+                      <a class="dropdown-item" href="<%=AMView.WELCOME_CTL%>">
                          <div class="d-flex align-items-center">
                            <div class="setting-icon"><i class="bi bi-lock-fill"></i></div>
                            <div class="setting-text ms-3"><span>Logout</span></div>
@@ -168,9 +173,12 @@
               </li>
               <li class="nav-item dropdown dropdown-large">
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                 
+                 <!--  
                   <div class="projects">
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                   </div>
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                    <div class="row row-cols-3 gx-2">
@@ -185,12 +193,12 @@
                         </a>
                       </div>
                       <div class="col">
-                        <a href="javascript:;">
+                        <a href="<%=AMView.USER_LIST_CTL%>">
                         <div class="apps p-2 radius-10 text-center">
                            <div class="apps-icon-box mb-1 text-white bg-danger bg-gradient">
                              <i class="bi bi-people-fill"></i>
                            </div>
-                           <p class="mb-0 apps-name">Story</p>
+                           <p class="mb-0 apps-name">Users</p>
                         </div>
                       </a>
                      </div>
@@ -254,7 +262,7 @@
                       </div>
                     </a>
                     </div>
-                    <!-- <div class="col">
+                    <div class="col">
                       <a href="javascript:;">
                       <div class="apps p-2 radius-10 text-center">
                          <div class="apps-icon-box mb-1 text-dark bg-warning bg-gradient">
@@ -263,17 +271,19 @@
                          <p class="mb-0 apps-name">Story</p>
                         </div>
                       </a>
-                    </div> -->
-                    
+                    </div>
                    </div><!--end row-->
                 </div>
               </li>
               <li class="nav-item dropdown dropdown-large">
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                 
+                 <!--  
                   <div class="messages">
                     <span class="notify-badge">5</span>
                     <i class="bi bi-messenger"></i>
                   </div>
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
                   <div class="p-2 border-bottom m-2">
@@ -288,7 +298,7 @@
                     </div>
                      <a class="dropdown-item" href="#">
                        <div class="d-flex align-items-center">
-                          <img src="assets/images/avatars/avatar-1.png" alt="" class="rounded-circle" width="52" height="52">
+                          <img src="assets/images/avatars/avatar.png" alt="" class="rounded-circle" width="52" height="52">
                           <div class="ms-3 flex-grow-1">
                             <h6 class="mb-0 dropdown-msg-user">Amelio Joly <span class="msg-time float-end text-secondary">1 m</span></h6>
                             <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">The standard chunk of lorem...</small>
@@ -378,15 +388,22 @@
               </li>
               <li class="nav-item dropdown dropdown-large d-none d-sm-block">
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                
+                <!--  
                   <div class="notifications">
                     <span class="notify-badge">8</span>
                     <i class="bi bi-bell-fill"></i>
                   </div>
+                  
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
+                  
+                  
                   <div class="p-2 border-bottom m-2">
                       <h5 class="h5 mb-0">Notifications</h5>
                   </div>
+                  
                   <div class="header-notifications-list p-2">
                      <div class="dropdown-item bg-light radius-10 mb-1">
                       <form class="dropdown-searchbar position-relative">
@@ -515,7 +532,7 @@
               <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
             </div>
             <div>
-              <h4 class="logo-text">Skodash</h4>
+              <h4 class="logo-text">SZI AMIS</h4>
             </div>
             <div class="toggle-icon ms-auto"><i class="bi bi-chevron-double-left"></i>
             </div>
@@ -529,15 +546,15 @@
                 <div class="menu-title">Dashboard</div>
               </a>
               <ul>
-                <li> <a href="index.html"><i class="bi bi-arrow-right-short"></i>eCommerce</a>
+                <li> <a href="index.html"><i class="bi bi-arrow-right-short"></i>Funiture and Fittings</a>
                 </li>
-                <li> <a href="index2.html"><i class="bi bi-arrow-right-short"></i>Sales</a>
+                <li> <a href="index2.html"><i class="bi bi-arrow-right-short"></i>Motor Vehicle</a>
                 </li>
-                <li> <a href="index3.html"><i class="bi bi-arrow-right-short"></i>Analytics</a>
+                <li> <a href="index3.html"><i class="bi bi-arrow-right-short"></i>Plant and Equipment</a>
                 </li>
-                <li> <a href="index4.html"><i class="bi bi-arrow-right-short"></i>Project Management</a>
+                <li> <a href="index4.html"><i class="bi bi-arrow-right-short"></i>Buildings</a>
                 </li>
-                <li> <a href="index5.html"><i class="bi bi-arrow-right-short"></i>CMS Dashboard</a>
+                <li> <a href="index5.html"><i class="bi bi-arrow-right-short"></i>Office Equipment</a>
                 </li>
               </ul>
             </li>
@@ -545,13 +562,23 @@
               <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bi bi-grid"></i>
                 </div>
-                <div class="menu-title">Application</div>
+                <div class="menu-title">Assets</div>
               </a>
               <ul>
-                <li> <a href="app-emailbox.html"><i class="bi bi-arrow-right-short"></i>Email</a>
+              
+              <li> <a href="<%=AMView.ASSET_REGISTRATION_STORES_CTL%>"><i class="bi bi-arrow-right-short"></i>Add Asset Details</a>
                 </li>
-                <li> <a href="app-chat-box.html"><i class="bi bi-arrow-right-short"></i>Chat Box</a>
+                
+                <!--  
+                 <li> <a href="<%=AMView.ORDER_CTL%>"><i class="bi bi-arrow-right-short"></i>Store Order Details</a>
                 </li>
+              
+                <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
+                </li>
+                -->
+                
+                
+                 <!-- 
                 <li> <a href="app-file-manager.html"><i class="bi bi-arrow-right-short"></i>File Manager</a>
                 </li>
                 <li> <a href="app-to-do.html"><i class="bi bi-arrow-right-short"></i>Todo List</a>
@@ -560,19 +587,24 @@
                 </li>
                 <li> <a href="app-fullcalender.html"><i class="bi bi-arrow-right-short"></i>Calendar</a>
                 </li>
+                -->
               </ul>
             </li>
-            <li class="menu-label"></li>ASSET REGISTRATION
+            
+            <!--  
+            <li class="menu-label">SZI Assets</li>
             <li>
               <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bi bi-award"></i>
                 </div>
-                <div class="menu-title">Asset Registration</div>
+                <div class="menu-title">Computers</div>
               </a>
               <ul>
-                <li> <a href="<%=AMView.ASSET_REGISTRATION_CTL%>"><i class="bi bi-arrow-right-short"></i>Register Asset</a>
+                <li> <a href="widgets-static-widgets.html"><i class="bi bi-arrow-right-short"></i>Laptops</a>
                 </li>
-                <li> <a href="widgets-data-widgets.html"><i class="bi bi-arrow-right-short"></i>Data Widgets</a>
+                <li> <a href="widgets-data-widgets.html"><i class="bi bi-arrow-right-short"></i>Mobile Phones</a>
+                </li>
+                <li> <a href="widgets-data-widgets.html"><i class="bi bi-arrow-right-short"></i>Desktops</a>
                 </li>
               </ul>
             </li>
@@ -580,7 +612,7 @@
               <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bi bi-bag-check"></i>
                 </div>
-                <div class="menu-title">eCommerce</div>
+                <div class="menu-title">Assets</div>
               </a>
               <ul>
                 <li> <a href="ecommerce-products-list.html"><i class="bi bi-arrow-right-short"></i>Products List</a>
@@ -833,16 +865,19 @@
 
        <!--start content-->
           <main class="page-content">
-              
+              <!-- firstDashboard -->
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4">
               <div class="col">
                 <div class="card radius-10">
                   <div class="card-body">
                       <div class="d-flex align-items-center">
                           <div>
-                              <p class="mb-0 text-secondary">Total Orders</p>
+                              <p class="mb-0 text-secondary">Funiture and Fittings</p>
                               <h4 class="my-1">4805</h4>
+                              <!--
                               <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 5% from last week</p>
+                                -->
+                              
                           </div>
                           <div class="widget-icon-large bg-gradient-purple text-white ms-auto"><i class="bi bi-basket2-fill"></i>
                           </div>
@@ -855,7 +890,87 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div>
-                                <p class="mb-0 text-secondary">Total Revenue</p>
+                                <p class="mb-0 text-secondary">Motor Vehicle</p>
+                                <h4 class="my-1">100</h4>
+                                
+                                <!-- 
+                                
+                                 
+                                <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 4.6 from last week</p>
+                                -->
+                            </div>
+                            <div class="widget-icon-large bg-gradient-success text-white ms-auto"><i class="bi bi-currency-exchange"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="col">
+                <div class="card radius-10">
+                  <div class="card-body">
+                      <div class="d-flex align-items-center">
+                          <div>
+                              <p class="mb-0 text-secondary">Plant and Equipment</p>
+                              <h4 class="my-1">110</h4>
+                              <!-- 
+                              
+                             <p class="mb-0 font-13 text-danger"><i class="bi bi-caret-down-fill"></i> 2.7 from last week</p>
+                             -->
+                          </div>
+                          <div class="widget-icon-large bg-gradient-danger text-white ms-auto"><i class="bi bi-people-fill"></i>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+               </div>
+               <div class="col">
+                <div class="card radius-10">
+                  <div class="card-body">
+                      <div class="d-flex align-items-center">
+                          <div>
+                              <p class="mb-0 text-secondary">Buildings</p>
+                              <h4 class="my-1">38</h4>
+                              
+                              <!--  
+                              
+                              <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 12.2% from last week</p>
+                              -->
+                          </div>
+                          <div class="widget-icon-large bg-gradient-info text-white ms-auto"><i class="bi bi-bar-chart-line-fill"></i>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+               </div>
+            </div><!--end row-->
+            
+            <!-- SecondDashboard -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4">
+              <div class="col">
+                <div class="card radius-10">
+                  <div class="card-body">
+                      <div class="d-flex align-items-center">
+                          <div>
+                              <p class="mb-0 text-secondary">Office Equipment</p>
+                              <h4 class="my-1">480</h4>
+                              <!--  
+                              <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 5% from last week</p>
+                              -->
+                          </div>
+                          <div class="widget-icon-large bg-gradient-purple text-white ms-auto"><i class="bi bi-basket2-fill"></i>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+               </div>
+               
+                <!--  
+               <div class="col">
+                  <div class="card radius-10">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <p class="mb-0 text-secondary">Total Assets</p>
                                 <h4 class="my-1">$24K</h4>
                                 <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 4.6 from last week</p>
                             </div>
@@ -870,7 +985,7 @@
                   <div class="card-body">
                       <div class="d-flex align-items-center">
                           <div>
-                              <p class="mb-0 text-secondary">Total Customers</p>
+                              <p class="mb-0 text-secondary">Total Invoices</p>
                               <h4 class="my-1">5.8K</h4>
                               <p class="mb-0 font-13 text-danger"><i class="bi bi-caret-down-fill"></i> 2.7 from last week</p>
                           </div>
@@ -885,7 +1000,7 @@
                   <div class="card-body">
                       <div class="d-flex align-items-center">
                           <div>
-                              <p class="mb-0 text-secondary">Bounce Rate</p>
+                              <p class="mb-0 text-secondary">Depreciated Assets</p>
                               <h4 class="my-1">38.15%</h4>
                               <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 12.2% from last week</p>
                           </div>
@@ -895,16 +1010,19 @@
                   </div>
                 </div>
                </div>
+               -->
             </div><!--end row-->
-
-
+            
+            
+            
+<!-- 
             <div class="row">
               <div class="col-12 col-lg-8 col-xl-8 d-flex">
                 <div class="card radius-10 w-100">
                   <div class="card-body">
                      <div class="row row-cols-1 row-cols-lg-2 g-3 align-items-center pb-3">
                         <div class="col">
-                          <h5 class="mb-0">Sales Figures</h5>
+                          <h5 class="mb-0">Stastics</h5>
                         </div>
                         <div class="col">
                           <div class="d-flex align-items-center justify-content-sm-end gap-3 cursor-pointer">
@@ -959,7 +1077,8 @@
                 </div>
               </div>
             </div><!--end row-->
-
+            
+              <!--  
             <div class="row">
                <div class="col-12 col-lg-6 col-xl-6 d-flex">
                 <div class="card radius-10 w-100">
@@ -1007,7 +1126,7 @@
                   <div class="card-body">
                     <div class="row row-cols-1 row-cols-lg-2 g-3 align-items-center">
                       <div class="col">
-                        <h5 class="mb-0">Product Actions</h5>
+                        <h5 class="mb-0">Statics</h5>
                       </div>
                       <div class="col">
                         <div class="d-flex align-items-center justify-content-sm-end gap-3 cursor-pointer">
@@ -1022,8 +1141,10 @@
                </div>
             </div><!--end row-->
 
-
-            <div class="row">
+ <!-- 
+ DUMMY DATA
+ 
+ <div class="row">
               <div class="col-12 col-lg-6 col-xl-4 d-flex">
                 <div class="card radius-10 w-100">
                  <div class="card-header bg-transparent">
@@ -1432,90 +1553,15 @@
                  </div>
                </div>
              </div>
-           </div><!--end row-->
+           </div>
+ 
+  -->
+            <!--end row-->
             
-            <div class="card radius-10">
-               <div class="card-body">
-                 <div class="row g-3">
-                   <div class="col-12 col-lg-4 col-xl-4 d-flex">
-                    <div class="card mb-0 radius-10 border shadow-none w-100">
-                      <div class="card-body">
-                        <h5 class="card-title">Top Sales Locations</h5>
-                        <h4 class="mt-4">$36.2K <i class="flag-icon flag-icon-us rounded"></i></h4>
-                        <p class="mb-0 text-secondary font-13">Our Most Customers in US</p>
-                        <ul class="list-group list-group-flush mt-3">
-                          <li class="list-group-item border-top">
-                            <div class="d-flex align-items-center gap-2">
-                               <div><i class="flag-icon flag-icon-us"></i></div>
-                               <div>United States</div>
-                               <div class="ms-auto">289</div>
-                            </div>
-                          </li>
-                          <li class="list-group-item">
-                           <div class="d-flex align-items-center gap-2">
-                              <div><i class="flag-icon flag-icon-au"></i></div>
-                              <div>Malaysia</div>
-                              <div class="ms-auto">562</div>
-                           </div>
-                         </li>
-                         <li class="list-group-item">
-                           <div class="d-flex align-items-center gap-2">
-                              <div><i class="flag-icon flag-icon-in"></i></div>
-                              <div>India</div>
-                              <div class="ms-auto">354</div>
-                           </div>
-                         </li>
-                         <li class="list-group-item">
-                           <div class="d-flex align-items-center gap-2">
-                              <div><i class="flag-icon flag-icon-ca"></i></div>
-                              <div>Indonesia</div>
-                              <div class="ms-auto">147</div>
-                           </div>
-                         </li>
-                         <li class="list-group-item">
-                           <div class="d-flex align-items-center gap-2">
-                              <div><i class="flag-icon flag-icon-ad"></i></div>
-                              <div>Turkey</div>
-                              <div class="ms-auto">652</div>
-                           </div>
-                         </li>
-                         <li class="list-group-item">
-                           <div class="d-flex align-items-center gap-2">
-                              <div><i class="flag-icon flag-icon-cu"></i></div>
-                              <div>Netherlands</div>
-                              <div class="ms-auto">287</div>
-                           </div>
-                         </li>
-                         <li class="list-group-item">
-                           <div class="d-flex align-items-center gap-2">
-                              <div><i class="flag-icon flag-icon-is"></i></div>
-                              <div>Italy</div>
-                              <div class="ms-auto">634</div>
-                           </div>
-                         </li>
-                         <li class="list-group-item">
-                           <div class="d-flex align-items-center gap-2">
-                              <div><i class="flag-icon flag-icon-ge"></i></div>
-                              <div>Canada</div>
-                              <div class="ms-auto">524</div>
-                           </div>
-                         </li>
-                        </ul>
-                      </div>
-                    </div>
-                   </div>
-                   <div class="col-12 col-lg-8 col-xl-8 d-flex">
-                    <div class="card mb-0 radius-10 border shadow-none w-100">
-                      <div class="card-body">
-                        <div class="" id="geographic-map"></div>
-                       </div>
-                      </div>
-                  </div>
-                 </div><!--end row-->
-               </div>
-            </div>
-
-            <div class="card radius-10">
+            
+            <!-- DUMMY DATA TWO
+            
+               <div class="card radius-10">
               <div class="card-header bg-transparent">
                 <div class="row g-3 align-items-center">
                   <div class="col">
@@ -1699,6 +1745,11 @@
                 </div>
               </div>
             </div>
+            
+             -->
+           
+
+         
 
             
           </main>

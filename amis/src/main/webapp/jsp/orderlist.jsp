@@ -69,6 +69,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Dashboard</a>
               </li>
+              
+              <!--  
               <li class="nav-item">
                 <a class="nav-link" href="app-emailbox.html">Email</a>
               </li>
@@ -81,6 +83,8 @@
               <li class="nav-item d-none d-xxl-block">
                 <a class="nav-link" href="app-to-do.html">Todo</a>
               </li>
+              
+              -->
             </ul>
           </div>
           <div class="search-toggle-icon d-xl-none ms-auto">
@@ -117,7 +121,7 @@
                       class="user-img"
                       alt=""
                     />
-                    <div class="user-name d-none d-sm-block">Procurement Officer</div>
+                    <div class="user-name d-none d-sm-block">Manager Procurement</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -224,9 +228,14 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
+                
+                <!--  
                   <div class="projects">
+                  
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                   </div>
+                  
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                   <div class="row row-cols-3 gx-2">
@@ -348,10 +357,14 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
+                
+                <!--  
                   <div class="messages">
                     <span class="notify-badge">5</span>
                     <i class="bi bi-messenger"></i>
                   </div>
+                  
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
                   <div class="p-2 border-bottom m-2">
@@ -594,10 +607,13 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
+                <!--  
                   <div class="notifications">
                     <span class="notify-badge">8</span>
                     <i class="bi bi-bell-fill"></i>
                   </div>
+                  
+                  -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
                   <div class="p-2 border-bottom m-2">
@@ -862,76 +878,56 @@
         <!--navigation-->
         <ul class="metismenu" id="menu">
           <li>
-            <a href="javascript:;" class="has-arrow">
-              <div class="parent-icon"><i class="bi bi-house-door"></i></div>
-              <div class="menu-title">Dashboard</div>
-            </a>
-            <ul>
-              <li>
-                <a href="index.html"
-                  ><i class="bi bi-arrow-right-short"></i>eCommerce</a
-                >
-              </li>
-              <li>
-                <a href="index2.html"
-                  ><i class="bi bi-arrow-right-short"></i>Sales</a
-                >
-              </li>
-              <li>
-                <a href="index3.html"
-                  ><i class="bi bi-arrow-right-short"></i>Analytics</a
-                >
-              </li>
-              <li>
-                <a href="index4.html"
-                  ><i class="bi bi-arrow-right-short"></i>Project Management</a
-                >
-              </li>
-              <li>
-                <a href="index5.html"
-                  ><i class="bi bi-arrow-right-short"></i>CMS Dashboard</a
-                >
-              </li>
-            </ul>
-          </li>
+              <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bi bi-house-door"></i>
+                </div>
+                <div class="menu-title">Dashboard</div>
+              </a>
+              <ul>
+                <li> <a href="index.html"><i class="bi bi-arrow-right-short"></i>Funiture and Fittings</a>
+                </li>
+                <li> <a href="index2.html"><i class="bi bi-arrow-right-short"></i>Motor Vehicle</a>
+                </li>
+                <li> <a href="index3.html"><i class="bi bi-arrow-right-short"></i>Plant and Equipment</a>
+                </li>
+                <li> <a href="index4.html"><i class="bi bi-arrow-right-short"></i>Buildings</a>
+                </li>
+                <li> <a href="index5.html"><i class="bi bi-arrow-right-short"></i>Office Equipment</a>
+                </li>
+              </ul>
+            </li>
           <li>
-            <a href="javascript:;" class="has-arrow">
-              <div class="parent-icon"><i class="bi bi-grid"></i></div>
-              <div class="menu-title">Application</div>
-            </a>
-            <ul>
-              <li>
-                <a href="app-emailbox.html"
-                  ><i class="bi bi-arrow-right-short"></i>Email</a
-                >
-              </li>
-              <li>
-                <a href="app-chat-box.html"
-                  ><i class="bi bi-arrow-right-short"></i>Chat Box</a
-                >
-              </li>
-              <li>
-                <a href="app-file-manager.html"
-                  ><i class="bi bi-arrow-right-short"></i>File Manager</a
-                >
-              </li>
-              <li>
-                <a href="app-to-do.html"
-                  ><i class="bi bi-arrow-right-short"></i>Todo List</a
-                >
-              </li>
-              <li>
-                <a href="app-invoice.html"
-                  ><i class="bi bi-arrow-right-short"></i>Invoice</a
-                >
-              </li>
-              <li>
-                <a href="app-fullcalender.html"
-                  ><i class="bi bi-arrow-right-short"></i>Calendar</a
-                >
-              </li>
-            </ul>
-          </li>
+              <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bi bi-grid"></i>
+                </div>
+                <div class="menu-title">Assets</div>
+              </a>
+              <ul>
+              
+              <li> <a href="<%=AMView.ASSET_REGISTRATION_CTL%>"><i class="bi bi-arrow-right-short"></i>Add Asset Details</a>
+                </li>
+                
+                 <li> <a href="<%=AMView.ORDER_CTL%>"><i class="bi bi-arrow-right-short"></i>Store Order Details</a>
+                </li>
+              
+                <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
+                </li>
+                
+                
+                 <!-- 
+                <li> <a href="app-file-manager.html"><i class="bi bi-arrow-right-short"></i>File Manager</a>
+                </li>
+                <li> <a href="app-to-do.html"><i class="bi bi-arrow-right-short"></i>Todo List</a>
+                </li>
+                <li> <a href="app-invoice.html"><i class="bi bi-arrow-right-short"></i>Invoice</a>
+                </li>
+                <li> <a href="app-fullcalender.html"><i class="bi bi-arrow-right-short"></i>Calendar</a>
+                </li>
+                -->
+              </ul>
+            </li>
+            
+            <!--  
           <li class="menu-label">UI Elements</li>
           <li>
             <a href="javascript:;" class="has-arrow">
@@ -1382,7 +1378,13 @@
       <main class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-          <div class="breadcrumb-title pe-3">Tables</div>
+        
+        <!-- 
+                  <div class="breadcrumb-title pe-3">Tables</div>
+         -->
+
+          
+          <!--  
           <div class="ps-3">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb mb-0 p-0">
@@ -1395,6 +1397,10 @@
               </ol>
             </nav>
           </div>
+          
+          -->
+          
+          <!--  
           <div class="ms-auto">
             <div class="btn-group">
             <li><a href="<%=AMView.ORDER_CTL%>" >
@@ -1403,6 +1409,8 @@
               </li>
             </div>
           </div>
+          
+          -->
         </div>
         <!--end breadcrumb-->
         
@@ -1416,7 +1424,7 @@
         <div class="card">
           <div class="card-body">
             <div class="d-flex align-items-center">
-              <h5 class="mb-0">Order Details</h5>
+              <h5 class="mb-0">IFMIS ORDER DETAILS</h5>
               <form class="ms-auto position-relative" action="<%=AMView.ORDER_LIST_CTL%>" 
               method="">
                 <div

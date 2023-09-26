@@ -87,15 +87,16 @@
 			<li class="nav-item"><a class="nav-link"
 				href="<%=AMView.HOLIDAY_CTL%>" style="font-family: cursive;">Apply Leave</a></li>
 
+   <!--  
 	<li class="nav-item"><a class="nav-link"
 				href="<%=AMView.HOLIDAY_LIST_CTL%>" style="font-family: cursive;">Leave Status</a></li>
-
-		
-			<%
-				} else if (userBean.getRoleid() == 3) {
-			%>
+  -->
+		<!--  
+			//<%
+				//} else if (userBean.getRoleid() == 3) {
+		//	%>
 			<li class="nav-item"><a class="nav-link"
-				href="<%=AMView.MANAGER_CTL%>" style="font-family: cursive;">Leave Status</a></li>
+			//	href="<%=AMView.MANAGER_CTL%>" style="font-family: cursive;">Leave Status</a></li>
 			
 			<%
 				}
@@ -105,7 +106,7 @@
 				}
 			%>
 			
-			
+			-->
 		</ul>
 
 		<%
@@ -131,7 +132,7 @@
 				role="button" aria-expanded="false" style="margin-left: 10px;"><%=welcomeMsg%></a>
 				<ul class="dropdown-menu">
 					<li><a class="dropdown-item"
-						href="<%=AMView.LOGIN_CTL%>?operation=<%=LoginCtl.OP_LOGOUT%>">Logout</a></li>
+						href="<%=AMView.LOGIN_CTL%>?operation=<%=LoginCtl.OP_LOGOUT%>">LogIn</a></li>
 				</ul></li>
 		</ul>
 

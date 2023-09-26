@@ -108,7 +108,7 @@
                   <li>
                      <a class="dropdown-item" href="#">
                        <div class="d-flex align-items-center">
-                          <img src="assets/images/avatars/avatar-1.png" alt="" class="rounded-circle" width="60" height="60">
+                          <img src="assets/images/avatars/avatar.png" alt="" class="rounded-circle" width="60" height="60">
                           <div class="ms-3">
                             <h6 class="mb-0 dropdown-user-name">Admin</h6>
                             <small class="mb-0 dropdown-user-designation text-secondary">Smart Zambia</small>
@@ -125,6 +125,8 @@
                          </div>
                        </a>
                     </li>
+                    
+                    <!-- 
                     <li>
                       <a class="dropdown-item" href="#">
                          <div class="d-flex align-items-center">
@@ -157,6 +159,7 @@
                          </div>
                        </a>
                     </li>
+                    -->
                     <li><hr class="dropdown-divider"></li>
                     <li>
                       <a class="dropdown-item" href="<%=AMView.WELCOME_CTL%>">
@@ -295,7 +298,7 @@
                     </div>
                      <a class="dropdown-item" href="#">
                        <div class="d-flex align-items-center">
-                          <img src="assets/images/avatars/avatar-1.png" alt="" class="rounded-circle" width="52" height="52">
+                          <img src="assets/images/avatars/avatar.png" alt="" class="rounded-circle" width="52" height="52">
                           <div class="ms-3 flex-grow-1">
                             <h6 class="mb-0 dropdown-msg-user">Amelio Joly <span class="msg-time float-end text-secondary">1 m</span></h6>
                             <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">The standard chunk of lorem...</small>

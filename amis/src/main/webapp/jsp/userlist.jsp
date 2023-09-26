@@ -126,7 +126,7 @@
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
                         <img
-                          src="assets/images/avatars/avatar-1.png"
+                          src="assets/images/avatars/avatar.png"
                           alt=""
                           class="rounded-circle"
                           width="60"
@@ -155,6 +155,8 @@
                       </div>
                     </a>
                   </li>
+                  
+                  <!-- 
                   <li>
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
@@ -203,6 +205,8 @@
                       </div>
                     </a>
                   </li>
+                  
+                  -->
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a

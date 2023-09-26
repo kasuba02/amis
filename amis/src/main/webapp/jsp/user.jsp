@@ -887,30 +887,6 @@
             </a>
             <ul>
               <li>
-                <a href="index.html"
-                  ><i class="bi bi-arrow-right-short"></i>eCommerce</a
-                >
-              </li>
-              <li>
-                <a href="index2.html"
-                  ><i class="bi bi-arrow-right-short"></i>Sales</a
-                >
-              </li>
-              <li>
-                <a href="index3.html"
-                  ><i class="bi bi-arrow-right-short"></i>Analytics</a
-                >
-              </li>
-              <li>
-                <a href="index4.html"
-                  ><i class="bi bi-arrow-right-short"></i>Project Management</a
-                >
-              </li>
-              <li>
-                <a href="index5.html"
-                  ><i class="bi bi-arrow-right-short"></i>CMS Dashboard</a
-                >
-              </li>
             </ul>
           </li>
           <li>

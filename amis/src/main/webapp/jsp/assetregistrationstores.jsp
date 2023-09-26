@@ -129,7 +129,7 @@
                       class="user-img"
                       alt=""
                     />
-                    <div class="user-name d-none d-sm-block">Procurement Officer</div>
+                    <div class="user-name d-none d-sm-block">Stores Officer</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -144,7 +144,7 @@
                           height="60"
                         />
                         <div class="ms-3">
-                          <h6 class="mb-0 dropdown-user-name">Procurement Officer</h6>
+                          <h6 class="mb-0 dropdown-user-name">Stores Officer</h6>
                           <small
                             class="mb-0 dropdown-user-designation text-secondary"
                             >Smart Zambia</small
@@ -1551,7 +1551,7 @@
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("email", request)%></div>
 			
-			<!--  
+			< 
 			<div class="col-6">
 				<label for="exampleInputPassword1" class="form-label">Date Acquisition</label>
 				<input type="password" name="password" class="form-control"
@@ -1560,16 +1560,16 @@
 
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("password", request)%></div>
 			
-			-->
 			
-			<!--  
+			
+			
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">GRZ#</label> <input
 					type="text" name="phoneNo" class="form-control"
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			-->
+			
 			
 			
 			<div class="col-6">
@@ -1579,7 +1579,7 @@
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
               
-             <!-- 
+             
 
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Serial Number</label> <input
@@ -1587,10 +1587,10 @@
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-           -->
            
            
-           <!--  
+           
+           
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Location</label> <input
 					type="text" name="phoneNo" class="form-control"
@@ -1598,9 +1598,9 @@
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
            
-           -->
+          
            
-           <!-- 
+           
            
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Plot Number</label> <input
@@ -1608,9 +1608,9 @@
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-           -->
            
-           <!--  
+           
+           
            
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Capitalization Amount</label> <input
@@ -1618,9 +1618,9 @@
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-           -->
            
-           <!--  
+           
+            
            
             <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Asset Status</label> <input
@@ -1629,9 +1629,9 @@
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
 			
-			-->
 			
-			<!--  
+			
+			 
 			 <div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Revaluation Amount</label> <input
 					type="text" name="phoneNo" class="form-control"
@@ -1694,7 +1694,7 @@
 					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			-->
+			
 			
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">IFMIS Purchase Order Date</label> <input

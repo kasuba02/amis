@@ -20,12 +20,12 @@ import com.amis.ms.Utility.ServletUtility;
 /**
  * Servlet implementation class ManagerCtl
  */
-@WebServlet(name = "ManagerPCtl", urlPatterns = "/managerprocurement")
-public class ManagerPCtl extends BaseCtl {
+@WebServlet(name = "ManagerPOrderListCtl", urlPatterns = "/managerprocurementorderlist")
+public class ManagerPOrderListCtl extends BaseCtl {
 	private static final long serialVersionUID = 1L;
        
   
-    public ManagerPCtl() {
+    public ManagerPOrderListCtl() {
         super();
     }
     public static final String OP_Approve = "APPROVE";
@@ -63,7 +63,7 @@ public class ManagerPCtl extends BaseCtl {
 		OrderModel model = new OrderModel();
 		OrderBean bean = null;
 		System.out.println("in  APPROVE do get");
-	
+		
 		long id = DataUtility.getLong(request.getParameter("id"));
 
 		List list = null;
@@ -103,7 +103,7 @@ public class ManagerPCtl extends BaseCtl {
 
 	@Override
 	protected String getView() {
-		return AMView.MANAGER_P_VIEW;
+		return AMView.MANAGER_P_LIST_VIEW;
 	}
 
 }
