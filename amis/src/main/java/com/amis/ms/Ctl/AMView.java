@@ -62,4 +62,5 @@ public interface AMView {
 	public String ORDER_LIST_P_VIEW = PAGE_FOLDER + "/orderlistp.jsp";
 	public String ASSET_REGISTRATION_VIEW = PAGE_FOLDER + "/assetregistration.jsp";
 	public String ASSET_REGISTRATION_STORES_VIEW = PAGE_FOLDER + "/assetregistrationstores.jsp";
+	public String APPROVE_REJECT_VIEW = PAGE_FOLDER + "/approve-reject.jsp";
 }

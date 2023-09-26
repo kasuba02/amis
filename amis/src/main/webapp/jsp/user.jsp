@@ -1418,7 +1418,7 @@
         
         <!-- Update -->
 
-      <div class="container mt-5">
+   <div class="container mt-5">
 	<h3 class="text-center mt-5">Registration</h3>
 	<form action="<%=AMView.USER_CTL%>" method="post">
 <h4 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h4>
@@ -1441,32 +1441,32 @@
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">First
 					Name</label> <input type="text" name="firstName" class="form-control "
-					id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean.getFirstName())%>">
+					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("firstName", request)%></div>
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Last Name</label>
 				<input type="text" name="lastName" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean.getLastName())%>">
+					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("lastName", request)%></div>
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">Email</label> <input
 					type="text" name="email" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean.getEmail())%>">
+					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("email", request)%></div>
 			<div class="col-6">
 				<label for="exampleInputPassword1" class="form-label">Password</label>
 				<input type="password" name="password" class="form-control"
-					id="exampleInputPassword1" value="<%=DataUtility.getStringData(bean.getPassword())%>">
+					id="exampleInputPassword1">
 			</div>
 
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("password", request)%></div>
 			<div class="col-6">
 				<label for="exampleInputEmail1" class="form-label">PhoneNo</label> <input
 					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp"  value="<%=DataUtility.getStringData(bean.getPhoneNo())%>">
+					id="exampleInputEmail1" aria-describedby="emailHelp">
 			</div>
 			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
 			
@@ -1488,9 +1488,9 @@
 						<label class="form-label">Role</label>
 						<select name="role" class="form-control">
 						 <option >---Select---</option>
-						 <option value="2">Stock V Officer</option>
+						 <option value="2">Stores Officer</option>
 						<option value="3">Procurement Officer</option> 
-						<option value="4">Manager Accounts</option>
+						<option value="4">Head Of Accounts</option>
 						<option value="5">Manager Procurement</option> 
 						 </select>
 						</div>
@@ -1500,21 +1500,10 @@
 			
 
 <br>
-<div class="container text-center">
-			<%
-						if (bean.getId() > 0) {
-					%>
-					<input type="submit" class="btn btn-primary" name="operation"
-						value="<%=UserCtl.OP_UPDATE%>">
-					<%
-						} else {
-					%>
-					<input type="submit" class="btn btn-primary" name="operation"
-						value="<%=UserCtl.OP_SAVE%>">
-					<%
-						}
-					%>
-					</div>
+			<div class="container text-center">
+				<input type="submit" class="btn btn-primary" name="operation"
+					value="<%=RegistrationCtl.OP_SAVE%>">
+			</div>
 			</div>
 		</div>
 	</form>

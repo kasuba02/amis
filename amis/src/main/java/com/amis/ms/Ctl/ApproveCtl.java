@@ -71,6 +71,7 @@ public class ApproveCtl extends BaseCtl {
 			try {
 				long i = model.Update("Approved", Hid);
 				System.out.println("okkkk");
+		
 				ServletUtility.forward(getView(), request, response);
 				return;
 			} catch (Exception e) {
@@ -81,6 +82,7 @@ public class ApproveCtl extends BaseCtl {
 		if (Rid > 0) {
 			try {
 				long i = model.reject("Rejected", Rid);
+			
 				ServletUtility.forward(getView(), request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -125,7 +127,7 @@ public class ApproveCtl extends BaseCtl {
 
 	@Override
 	protected String getView() {
-		return AMView.ORDER_LIST_P_VIEW;
+		return AMView.APPROVE_REJECT_VIEW;
 	}
 
 }
