@@ -10,7 +10,7 @@ public class HTMLUtility {
 	public static String getList(String name, String selectedVal,HashMap<String , String>map) {
 		Map<String, String> treeMap = new LinkedHashMap<String, String>(map);
 
-		StringBuffer sb = new StringBuffer("<select class='form-control' name='" + name + "'>");
+		StringBuffer sb = new StringBuffer("<select type='hidden' class='form-control' name='" + name + "'>");
 
 		Set<String> keys = map.keySet();
 		String val = null;

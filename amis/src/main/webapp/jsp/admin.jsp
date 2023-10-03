@@ -101,7 +101,7 @@
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
                   <div class="user-setting d-flex align-items-center gap-1">
                     <img src="assets/images/avatars/avatar.png" class="user-img" alt="">
-                    <div class="user-name d-none d-sm-block">Admin</div>
+                    <div class="user-name d-none d-sm-block"><%=userBean.getFirstName() %></div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">

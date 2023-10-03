@@ -212,7 +212,7 @@
                   <li>
                     <a
                       class="dropdown-item"
-                      href="authentication-signup-with-header-footer.html"
+                      href="<%=AMView.WELCOME_CTL%>"
                     >
                       <div class="d-flex align-items-center">
                         <div class="setting-icon">

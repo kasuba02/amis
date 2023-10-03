@@ -14,7 +14,7 @@
 
 
 	<h6 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h6>
-	<h6 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h6>
+	<!-- <h6 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h6> -->
 	<h3 class="text-center mt-5">Login</h3>
 	<hr>
 	<div class="container mt-5">

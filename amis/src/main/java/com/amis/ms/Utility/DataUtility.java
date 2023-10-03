@@ -1,4 +1,5 @@
 package com.amis.ms.Utility;
+import com.amis.ms.Bean.OrderBean;
 
 import java.sql.Time;
 import java.sql.Timestamp;
@@ -50,6 +51,26 @@ public class DataUtility {
 	public static long getLong(String val) {
 
 		if (DataValidator.isLong(val)) {
+			return Long.parseLong(val);
+
+		} else {
+
+			return 0;
+		}
+
+	}
+	
+	public static long getLongAmount(String val) {
+		
+		OrderBean bean = new OrderBean();
+
+		if (DataValidator.isLong(val)) {
+			
+			Long Qty = bean.getQty();
+			Long Price = bean.getPrice();
+			
+	
+			
 			return Long.parseLong(val);
 
 		} else {

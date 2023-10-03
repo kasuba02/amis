@@ -34,14 +34,17 @@ public interface AMView {
 	public String MANAGER_A_CTL = APP_CONTEXT + "/manageraccounts";
 	public String MANAGER_P_CTL = APP_CONTEXT + "/managerprocurement";
 	public String MANAGER_P_LIST_CTL = APP_CONTEXT + "/managerprocurementorderlist";
+	public String STORES_OFFICER_ORDER_LIST_CTL = APP_CONTEXT + "/storesofficerorderlist";
+	public String PROCUREMENT_ORDER_LIST = APP_CONTEXT + "/procurementofficerorderlist";
+	public String UPDATE_USER = APP_CONTEXT + "/updateuser";
 	
-	//User View
 	public String ADMIN_VIEW = PAGE_FOLDER + "/admin.jsp";
 	public String STOCKOFFICER_VIEW = PAGE_FOLDER + "/stockofficer.jsp";
 	public String PROCUREMENTOFFICER_VIEW = PAGE_FOLDER + "/procurementofficer.jsp";
 	public String MANAGER_A_VIEW = PAGE_FOLDER + "/manageraccounts.jsp";
 	public String MANAGER_P_VIEW = PAGE_FOLDER + "/managerprocurement.jsp";
 	public String MANAGER_P_LIST_VIEW = PAGE_FOLDER + "/managerprocurementorderlist.jsp";
+	public String STORESOFFICER_ORDER_LIST_VIEW = PAGE_FOLDER + "/storesofficerorderlist.jsp";
 	
 	
 	
@@ -63,4 +66,7 @@ public interface AMView {
 	public String ASSET_REGISTRATION_VIEW = PAGE_FOLDER + "/assetregistration.jsp";
 	public String ASSET_REGISTRATION_STORES_VIEW = PAGE_FOLDER + "/assetregistrationstores.jsp";
 	public String APPROVE_REJECT_VIEW = PAGE_FOLDER + "/approve-reject.jsp";
-}
+	public String STOCKOFFICER_ORDER_VIEW = PAGE_FOLDER + "/orderlist.jsp";
+	public String PROCUREMENTOFFICER_ORDER_VIEW = PAGE_FOLDER + "/procurementofficerorderlist.jsp";
+	public String UPDATE_USER_VIEW = PAGE_FOLDER + "/updateuser.jsp";
+}  

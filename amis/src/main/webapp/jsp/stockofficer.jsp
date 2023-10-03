@@ -101,7 +101,7 @@
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
                   <div class="user-setting d-flex align-items-center gap-1">
                     <img src="assets/images/avatars/avatar.png" class="user-img" alt="">
-                    <div class="user-name d-none d-sm-block">Stores Officer</div>
+                    <div class="user-name d-none d-sm-block"><%=userBean.getFirstName() %></div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -110,7 +110,7 @@
                        <div class="d-flex align-items-center">
                           <img src="assets/images/avatars/avatar.png" alt="" class="rounded-circle" width="60" height="60">
                           <div class="ms-3">
-                            <h6 class="mb-0 dropdown-user-name">Stores Officer</h6>
+                            <h6 class="mb-0 dropdown-user-name"><%=userBean.getFirstName() %></h6>
                             <small class="mb-0 dropdown-user-designation text-secondary">Smart Zambia</small>
                           </div>
                        </div>
@@ -416,7 +416,7 @@
                            <div class="notification-box"><i class="bi bi-basket2-fill"></i></div>
                            <div class="ms-3 flex-grow-1">
                              <h6 class="mb-0 dropdown-msg-user">New Orders <span class="msg-time float-end text-secondary">1 m</span></h6>
-                             <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">You have recived new orders</small>
+                             <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">You have recieved new orders</small>
                            </div>
                         </div>
                       </a>
@@ -569,13 +569,13 @@
               <li> <a href="<%=AMView.ASSET_REGISTRATION_STORES_CTL%>"><i class="bi bi-arrow-right-short"></i>Add Asset Details</a>
                 </li>
                 
-                <!--  
-                 <li> <a href="<%=AMView.ORDER_CTL%>"><i class="bi bi-arrow-right-short"></i>Store Order Details</a>
+                 
+                 <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
                 </li>
               
-                <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
+                <li> <a href="<%=AMView.STORES_OFFICER_ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>A/R Order Details</a>
                 </li>
-                -->
+                
                 
                 
                  <!-- 

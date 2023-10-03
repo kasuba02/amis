@@ -69,7 +69,7 @@
             <div class="top-navbar d-none d-xl-block">
             <ul class="navbar-nav align-items-center">
               <li class="nav-item">
-              <a class="nav-link" href="index.html">Dashboard</a>
+              <a class="nav-link" href="<%=AMView.PROCUREMENTOFFICER_VIEW%>">Dashboard</a>
               </li>
               <!-- 
               <li class="nav-item">
@@ -101,7 +101,7 @@
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
                   <div class="user-setting d-flex align-items-center gap-1">
                     <img src="assets/images/avatars/avatar.png" class="user-img" alt="">
-                    <div class="user-name d-none d-sm-block">Procurement Officer</div>
+                    <div class="user-name d-none d-sm-block"><%=userBean.getFirstName() %></div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -110,7 +110,7 @@
                        <div class="d-flex align-items-center">
                           <img src="assets/images/avatars/avatar.png" alt="" class="rounded-circle" width="60" height="60">
                           <div class="ms-3">
-                            <h6 class="mb-0 dropdown-user-name">Procurement Officer</h6>
+                            <h6 class="mb-0 dropdown-user-name"><%=userBean.getFirstName() %></h6>
                             <small class="mb-0 dropdown-user-designation text-secondary">Smart Zambia</small>
                           </div>
                        </div>
@@ -566,13 +566,14 @@
               </a>
               <ul>
               
+              <!-- 
               <li> <a href="<%=AMView.ASSET_REGISTRATION_CTL%>"><i class="bi bi-arrow-right-short"></i>Add Asset Details</a>
                 </li>
-                
+               --> 
                  <li> <a href="<%=AMView.ORDER_CTL%>"><i class="bi bi-arrow-right-short"></i>Store Order Details</a>
                 </li>
               
-                <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
+                <li> <a href="<%=AMView.PROCUREMENT_ORDER_LIST%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
                 </li>
                 
                 

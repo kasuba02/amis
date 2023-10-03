@@ -121,7 +121,7 @@
                       class="user-img"
                       alt=""
                     />
-                    <div class="user-name d-none d-sm-block">Manager Procurement</div>
+                    <div class="user-name d-none d-sm-block">Stores Officer</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -129,14 +129,14 @@
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
                         <img
-                          src="assets/images/avatars/avatar-1.png"
+                          src="assets/images/avatars/avatar.png"
                           alt=""
                           class="rounded-circle"
                           width="60"
                           height="60"
                         />
                         <div class="ms-3">
-                          <h6 class="mb-0 dropdown-user-name">Procurement Officer</h6>
+                          <h6 class="mb-0 dropdown-user-name">Stores Officer</h6>
                           <small
                             class="mb-0 dropdown-user-designation text-secondary"
                             >Smart Zambia</small
@@ -164,6 +164,7 @@
                         <div class="setting-icon">
                           <i class="bi bi-gear-fill"></i>
                         </div>
+                        <!--  
                         <div class="setting-text ms-3">
                           <span>Setting</span>
                         </div>
@@ -206,6 +207,7 @@
                       </div>
                     </a>
                   </li>
+                  -->
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a
@@ -904,13 +906,14 @@
               </a>
               <ul>
               
-              <li> <a href="<%=AMView.ASSET_REGISTRATION_CTL%>"><i class="bi bi-arrow-right-short"></i>Add Asset Details</a>
+             <li> <a href="<%=AMView.ASSET_REGISTRATION_STORES_CTL%>"><i class="bi bi-arrow-right-short"></i>Add Asset Details</a>
                 </li>
                 
-                 <li> <a href="<%=AMView.ORDER_CTL%>"><i class="bi bi-arrow-right-short"></i>Store Order Details</a>
+                 
+                 <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
                 </li>
               
-                <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
+                <li> <a href="<%=AMView.STORES_OFFICER_ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>A/R Order Details</a>
                 </li>
                 
                 
@@ -1482,8 +1485,7 @@
 	<td><a class="btn btn-success"
 					>Approved</a></td>
 			<% }else{%>		
-						<td><a class="btn btn-success"
-					>Pending</a></td>
+					
 				<%}%>		
 
 

@@ -79,7 +79,7 @@
           <div class="top-navbar d-none d-xl-block">
             <ul class="navbar-nav align-items-center">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Dashboard</a>
+                <a class="nav-link" href="<%=AMView.PROCUREMENTOFFICER_CTL %>">Dashboard</a>
               </li>
               
               <!--  
@@ -175,6 +175,7 @@
                         <div class="setting-icon">
                           <i class="bi bi-gear-fill"></i>
                         </div>
+                        <!--  
                         <div class="setting-text ms-3">
                           <span>Setting</span>
                         </div>
@@ -182,7 +183,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="index2.html">
+                    <a class="dropdown-item" >
                       <div class="d-flex align-items-center">
                         <div class="setting-icon">
                           <i class="bi bi-speedometer"></i>
@@ -216,12 +217,14 @@
                         </div>
                       </div>
                     </a>
+                    
+                    -->
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a
-                      class="dropdown-item"
-                      href="authentication-signup-with-header-footer.html"
+                      class="dropdown-item" href="<%=AMView.WELCOME_CTL %>"
+                      
                     >
                       <div class="d-flex align-items-center">
                         <div class="setting-icon">
@@ -232,6 +235,7 @@
                     </a>
                   </li>
                 </ul>
+                
               </li>
               <li class="nav-item dropdown dropdown-large">
                 <a
@@ -915,14 +919,14 @@
                 <div class="menu-title">Assets</div>
               </a>
               <ul>
-              
+              <!--  
               <li> <a href="<%=AMView.ASSET_REGISTRATION_CTL%>"><i class="bi bi-arrow-right-short"></i>Add Asset Details</a>
                 </li>
-                
+               --> 
                  <li> <a href="<%=AMView.ORDER_CTL%>"><i class="bi bi-arrow-right-short"></i>Store Order Details</a>
                 </li>
               
-                <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
+                <li> <a href="<%=AMView.PROCUREMENT_ORDER_LIST%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
                 </li>
                 
                 
@@ -1455,22 +1459,30 @@
 		<div class="container mt-5">
 			<div class="row h-100 justify-content-center align-items-center">
 				<div class="col-6">
-					<label class="form-label">Emp Name</label> <input type="text"
+				<!--  <label class="form-label">Emp Name</label>--> <input type="hidden"
 						name="empName" class="form-control " value="<%=DataUtility.getStringData(bean2.getFirstName())%>" aria-describedby="emailHelp">
 				</div>
 				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empName", request)%></div>
 				<div class="col-6">
-					<label class="form-label">Emp Email</label> <input type="text"
+				<!--  	<label class="form-label">Emp Email</label> --><input type="hidden"
 						name="empEmail" class="form-control" value="<%=DataUtility.getStringData(bean2.getEmail())%>" aria-describedby="emailHelp">
 				</div>
 				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empEmail", request)%></div>
 				<div class="col-6">
-					<label class="form-label">Emp ContactNo</label> <input type="text"
+				<!--  	<label class="form-label">Emp ContactNo</label> --><input type="hidden"
 						name="empContactNo" class="form-control"
 						aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean2.getPhoneNo())%>">
 				</div>
 				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
-				
+				<!-- 
+				<div class="col-6">
+					<label class="form-label">Department</label> <input type="text"
+						name="empContactNo" class="form-control"
+						aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean2.getDepartment())%>">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("department", request)%></div>
+				-->
+			
 				<%
 						HashMap<String, String> map1 = new HashMap<String, String>();
 				map1.put("Procurement", "Procurement");
@@ -1483,7 +1495,14 @@
 						</div>
 	<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("department", request)%></div>
 			
-			
+		
+		
+		<div class="col-6">
+					<label class="form-label">IFMIS Order#</label> <input type="text"
+						name="order" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("IFMIS No", request)%></div>
 			
 	<%
 						HashMap<String, String> map = new HashMap<String, String>();
@@ -1506,7 +1525,7 @@
 					<label class="form-label">Date</label> <input type="text"
 						name="leaveTo" data-provide="datepicker" id="datepicker" class="form-control" required="required">
 				</div>
-				<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("leaveDescription", request)%></div>
+				<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("Date", request)%></div>
 
 		<br>
 				<div class="col-6">
@@ -1514,21 +1533,15 @@
 					<textarea rows="3" cols="3" name="leaveDescription"
 						class="form-control"></textarea>
 				</div>
-				<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("leaveDescription", request)%></div>
+				<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("Description", request)%></div>
 
-        	<div class="col-6">
-					<label class="form-label">Order#</label> <input type="text"
-						name="order" class="form-control"
-						aria-describedby="emailHelp">
-				</div>
-				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
            
            <div class="col-6">
 					<label class="form-label">Item#</label> <input type="text"
 						name="item" class="form-control"
 						aria-describedby="emailHelp">
 				</div>
-				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Item", request)%></div>
 				
 				
            <div class="col-6">
@@ -1536,13 +1549,13 @@
 						name="qty" class="form-control"
 						aria-describedby="emailHelp">
 				</div>
-				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Qty", request)%></div>
           <div class="col-6">
 					<label class="form-label">UOM</label> <input type="text"
 						name="uom" class="form-control"
 						aria-describedby="emailHelp">
 				</div>
-				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("UOM", request)%></div>
 
 
           <div class="col-6">
@@ -1550,22 +1563,22 @@
 						name="code" class="form-control"
 						aria-describedby="emailHelp">
 				</div>
-				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Code", request)%></div>
 
          <div class="col-6">
 					<label class="form-label">Price</label> <input type="text"
 						name="price" class="form-control"
 						aria-describedby="emailHelp">
 				</div>
-				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Price", request)%></div>
 				
 				
 				<div class="col-6">
-					<label class="form-label">Amount</label> <input type="text"
+				<!--  	<label class="form-label">Amount</label> --> <input type="hidden"
 						name="amount" class="form-control"
 						aria-describedby="emailHelp">
 				</div>
-				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Amount", request)%></div>
 				
 				<br>
 				<div class="container text-center">

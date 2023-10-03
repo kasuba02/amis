@@ -1,15 +1,10 @@
-<%@page import="com.amis.ms.Ctl.UserListCt"%>
-<%@page import="com.amis.ms.Ctl.UserCtl"%>
+<%@page import="com.amis.ms.Ctl.OrderListCtl"%>
 <%@page import="com.amis.ms.Utility.ServletUtility"%>
 <%@page import="com.amis.ms.Bean.UserBean"%>
+<%@page import="com.amis.ms.Bean.OrderBean"%>
 <%@page import="com.amis.ms.Ctl.AMView"%>
 <%@page import="java.util.List"%>
 
-<%@page import="com.amis.ms.Ctl.RegistrationCtl"%>
-<%@page import="com.amis.ms.Utility.ServletUtility"%>
-<%@page import="com.amis.ms.Utility.DataUtility"%>
-<%@page import="com.amis.ms.Utility.HTMLUtility"%>
-<%@page import="java.util.HashMap"%>
 <%@page import="java.util.Iterator"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -72,7 +67,7 @@
           <div class="top-navbar d-none d-xl-block">
             <ul class="navbar-nav align-items-center">
               <li class="nav-item">
-                <a class="nav-link" href="<%=AMView.ADMIN_CTL%>">Dashboard</a>
+                <a class="nav-link" href="index.html">Dashboard</a>
               </li>
               
               <!--  
@@ -82,13 +77,14 @@
               <li class="nav-item">
                 <a class="nav-link" href="javascript:;">Projects</a>
               </li>
-              -->
               <li class="nav-item d-none d-xxl-block">
                 <a class="nav-link" href="javascript:;">Events</a>
               </li>
               <li class="nav-item d-none d-xxl-block">
                 <a class="nav-link" href="app-to-do.html">Todo</a>
               </li>
+              
+              -->
             </ul>
           </div>
           <div class="search-toggle-icon d-xl-none ms-auto">
@@ -125,7 +121,7 @@
                       class="user-img"
                       alt=""
                     />
-                    <div class="user-name d-none d-sm-block">Admin</div>
+                    <div class="user-name d-none d-sm-block">Stores Officer</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -140,7 +136,7 @@
                           height="60"
                         />
                         <div class="ms-3">
-                          <h6 class="mb-0 dropdown-user-name">Admin</h6>
+                          <h6 class="mb-0 dropdown-user-name">Stores Officer</h6>
                           <small
                             class="mb-0 dropdown-user-designation text-secondary"
                             >Smart Zambia</small
@@ -162,13 +158,13 @@
                       </div>
                     </a>
                   </li>
-                  <!--  
                   <li>
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
                         <div class="setting-icon">
                           <i class="bi bi-gear-fill"></i>
                         </div>
+                        <!--  
                         <div class="setting-text ms-3">
                           <span>Setting</span>
                         </div>
@@ -210,8 +206,8 @@
                         </div>
                       </div>
                     </a>
+                    -->
                   </li>
-                  -->
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a
@@ -237,8 +233,10 @@
                 
                 <!--  
                   <div class="projects">
+                  
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                   </div>
+                  
                   -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
@@ -361,11 +359,13 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                <!-- 
+                
+                <!--  
                   <div class="messages">
                     <span class="notify-badge">5</span>
                     <i class="bi bi-messenger"></i>
                   </div>
+                  
                   -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
@@ -609,7 +609,6 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                
                 <!--  
                   <div class="notifications">
                     <span class="notify-badge">8</span>
@@ -881,26 +880,40 @@
         <!--navigation-->
         <ul class="metismenu" id="menu">
           <li>
-            <a href="javascript:;" class="has-arrow">
-              <div class="parent-icon"><i class="bi bi-house-door"></i></div>
-              <div class="menu-title">Dashboard</div>
-            </a>
-            <ul>
-              <li>
-            </ul>
-          </li>
+              <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bi bi-house-door"></i>
+                </div>
+                <div class="menu-title">Dashboard</div>
+              </a>
+              <ul>
+                <li> <a href="index.html"><i class="bi bi-arrow-right-short"></i>Funiture and Fittings</a>
+                </li>
+                <li> <a href="index2.html"><i class="bi bi-arrow-right-short"></i>Motor Vehicle</a>
+                </li>
+                <li> <a href="index3.html"><i class="bi bi-arrow-right-short"></i>Plant and Equipment</a>
+                </li>
+                <li> <a href="index4.html"><i class="bi bi-arrow-right-short"></i>Buildings</a>
+                </li>
+                <li> <a href="index5.html"><i class="bi bi-arrow-right-short"></i>Office Equipment</a>
+                </li>
+              </ul>
+            </li>
           <li>
               <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bi bi-grid"></i>
                 </div>
-                <div class="menu-title">Settings</div>
+                <div class="menu-title">Assets</div>
               </a>
               <ul>
               
-                 <li> <a href="<%=AMView.USER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Users</a>
+              <li> <a href="<%=AMView.ASSET_REGISTRATION_STORES_CTL%>"><i class="bi bi-arrow-right-short"></i>Add Asset Details</a>
+                </li>
+                
+                 
+                 <li> <a href="<%=AMView.ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
                 </li>
               
-                <li> <a href="<%=AMView.USER_CTL%>"><i class="bi bi-arrow-right-short"></i>Add User</a>
+                <li> <a href="<%=AMView.STORES_OFFICER_ORDER_LIST_CTL%>"><i class="bi bi-arrow-right-short"></i>A/R Order Details</a>
                 </li>
                 
                 
@@ -918,7 +931,6 @@
             </li>
             
             <!--  
-          </li>
           <li class="menu-label">UI Elements</li>
           <li>
             <a href="javascript:;" class="has-arrow">
@@ -1369,9 +1381,11 @@
       <main class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        <!--  
-          <div class="breadcrumb-title pe-3">Tables</div>
-          -->
+        
+        <!-- 
+                  <div class="breadcrumb-title pe-3">Tables</div>
+         -->
+
           
           <!--  
           <div class="ps-3">
@@ -1386,142 +1400,117 @@
               </ol>
             </nav>
           </div>
+          
           -->
           
           <!--  
           <div class="ms-auto">
             <div class="btn-group">
-              <button type="button" class="btn btn-primary">Settings</button>
-              <button
-                type="button"
-                class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split"
-                data-bs-toggle="dropdown"
-              >
-                <span class="visually-hidden">Toggle Dropdown</span>
-              </button>
-              <div
-                class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"
-              >
-                <a class="dropdown-item" href="javascript:;">Action</a>
-                <a class="dropdown-item" href="javascript:;">Another action</a>
-                <a class="dropdown-item" href="javascript:;"
-                  >Something else here</a
-                >
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:;">Separated link</a>
-              </div>
+            <li><a href="<%=AMView.ORDER_CTL%>" >
+              <button type="button" class="btn btn-primary" >Add User</button>
+              </a>
+              </li>
             </div>
           </div>
+          
           -->
         </div>
         <!--end breadcrumb-->
         
-        <!-- Update -->
-
-      <div class="container mt-5">
-	<h3 class="text-center mt-5">Registration</h3>
-	<form action="<%=AMView.USER_CTL%>" method="post">
-<h4 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h4>
-	<h4 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h4>
+        <br>
+	<%
+		UserBean bean1 = (UserBean) session.getAttribute("user");
+	%>
 	
-		<jsp:useBean id="bean" scope="request"
-			class="com.amis.ms.Bean.UserBean" />
-		<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
-			type="hidden" name="createdBy" value="<%=bean.getCreatedby()%>">
-		<input type="hidden" name="modifiedBy"
-			value="<%=bean.getModifiedby()%>"> <input type="hidden"
-			name="createdDatetime" value="<%=bean.getCreatedatetime()%>">
-		<input type="hidden" name="modifiedDateTime"
-			value="<%=bean.getModifieddatetime()%>">
+        <h4 style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h4>
+	<h4 style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h4>
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <h5 class="mb-0">IFMIS ORDER DETAILS</h5>
+              <form class="ms-auto position-relative" action="<%=AMView.ORDER_LIST_CTL%>" 
+              method="">
+                <div
+                  class="position-absolute top-50 translate-middle-y search-icon px-3"
+                >
+                  <i class="bi bi-search"></i>
+                </div>
+                <input
+                  class="form-control ps-5"
+                  type="text"
+                  placeholder="search" name="theSearchName"
+                />
+              </form>
+        <form action="<%=AMView.ORDER_LIST_CTL%>" method="post">
+        
+            </div>
+            <div class="table-responsive mt-3">
+              <table class="table align-middle">
+                <thead class="table-secondary">
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Order#</th>
+                    <th>Item#</th>
+                    <th>Qty</th>
+                    <th>Uom</th>
+                    <th>Code</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                  
+                </thead>
+                <%
+				int index = 1;
+				List list = ServletUtility.getList(request);
+				Iterator it = list.iterator();
+				while (it.hasNext()) {
+					OrderBean bean = (OrderBean) it.next();
+			%>
+                <tbody>
+                
+          		<tr>
+			<%if (bean1.getDepartment().equalsIgnoreCase(bean.getDepartment())||bean1.getRoleid()==1){%>
+				<td><%=bean.getLeaveTo()%></td>
+				<td><%=bean.getLeavedescription()%></td>
+	            <td><%=bean.getOrder()%></td>
+	            <td><%=bean.getItem()%></td>
+	            <td><%=bean.getQty()%></td>
+	            <td><%=bean.getUom()%></td>
+	            <td><%=bean.getCode()%></td>
+	            <td><%=bean.getPrice()%></td>
+	            <td><%=bean.getAmount()%></td>
+	<%if(bean.getStatus().equalsIgnoreCase("Approved")) {%>
+	<td><a class="btn btn-success"
+					>Approved</a></td>
+			<% }else{%>		
+					
+				<%}%>		
 
 
-
-		<div class="container mt-5">
-		  <div class="row h-100 justify-content-center align-items-center">
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">First
-					Name</label> <input type="text" name="firstName" class="form-control "
-					id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean.getFirstName())%>">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("firstName", request)%></div>
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Last Name</label>
-				<input type="text" name="lastName" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean.getLastName())%>">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("lastName", request)%></div>
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Email</label> <input
-					type="text" name="email" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean.getEmail())%>">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("email", request)%></div>
-			<div class="col-6">
-				<label for="exampleInputPassword1" class="form-label">Password</label>
-				<input type="password" name="password" class="form-control"
-					id="exampleInputPassword1" value="<%=DataUtility.getStringData(bean.getPassword())%>">
-			</div>
-
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("password", request)%></div>
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">PhoneNo</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp"  value="<%=DataUtility.getStringData(bean.getPhoneNo())%>">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+					
+					<%if(bean.getStatus().equalsIgnoreCase("Rejected")) {%>
+	<td><a class="btn btn-danger"
+					>Rejected</a></td>
+			<% }else{%>		
+					
+				<%}%>		
+				
+				<%}%>	
+			</tr>
 			
 			
 			<%
-						HashMap<String, String> map = new HashMap<String, String>();
-						map.put("Procurement", "Procurement");
-						map.put("Accounts", "Accounts");
-					%>
+				}
+			%>
+                </tbody>
+              </table>
+              </form>
+            </div>
+          </div>
+        </div>
 
-					<div class="col-6">
-						<label class="form-label">Department</label>
-						<%=HTMLUtility.getList("department", String.valueOf(bean.getDepartment()), map)%>
-						</div>
-						
-						
-						
-						<div class="col-6" style="margin-left:10px;">
-						<label class="form-label">Role</label>
-						<select name="role" class="form-control">
-						 <option >---Select---</option>
-						 <option value="2">Stock V Officer</option>
-						<option value="3">Procurement Officer</option> 
-						<option value="4">Manager Accounts</option>
-						<option value="5">Manager Procurement</option> 
-						 </select>
-						</div>
-						
-	<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("department", request)%></div>
-			
-			
-
-<br>
-<div class="container text-center">
-			<%
-						if (bean.getId() > 0) {
-					%>
-					<input type="submit" class="btn btn-primary" name="operation"
-						value="<%=UserCtl.OP_UPDATE%>">
-					<%
-						} else {
-					%>
-					<input type="submit" class="btn btn-primary" name="operation"
-						value="<%=UserCtl.OP_SAVE%>">
-					<%
-						}
-					%>
-					</div>
-			</div>
-		</div>
-	</form>
-<br>
-
-</div>
-      
        
       </main>
       <!--end page main-->

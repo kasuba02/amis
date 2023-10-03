@@ -107,7 +107,7 @@ public class OrderCtl extends BaseCtl {
 		bean.setUom(DataUtility.getString(request.getParameter("uom")));
 		bean.setCode(DataUtility.getLong(request.getParameter("code")));
 		bean.setPrice(DataUtility.getLong(request.getParameter("price")));
-		bean.setAmount(DataUtility.getLong(request.getParameter("amount")));
+		bean.setAmount(DataUtility.getLong(request.getParameter("qty"))*DataUtility.getLong(request.getParameter("price")));
 		bean.setDepartment(DataUtility.getString(request.getParameter("department")));
 		populateDTO(bean, request);
 		return bean;

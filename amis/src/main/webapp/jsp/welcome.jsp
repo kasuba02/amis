@@ -15,10 +15,7 @@
       <img src="<%=AMView.APP_CONTEXT%>/img/slider1.jpg" class="d-block w-100" alt="..."  width="500" 
      height="700">
     </div>
-    <div class="carousel-item">
-      <img src="<%=AMView.APP_CONTEXT%>/img/slider22.jpg" class="d-block w-100" alt="..."  width="500" 
-     height="700">
-    </div>
+   
     <div class="carousel-item">
       <img src="<%=AMView.APP_CONTEXT%>/img/slider33.jpg" class="d-block w-100" alt="..."  width="500" 
      height="700">

@@ -85,7 +85,7 @@
 			%>
 
 			<li class="nav-item"><a class="nav-link"
-				href="<%=AMView.HOLIDAY_CTL%>" style="font-family: cursive;">Apply Leave</a></li>
+				href="<%=AMView.HOLIDAY_CTL%>" style="font-family: cursive;"></a></li>
 
    <!--  
 	<li class="nav-item"><a class="nav-link"
@@ -117,9 +117,9 @@
 				class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
 				role="button" aria-expanded="false" style="margin-left: 10px;">LogIn</a>
 				<ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="<%=AMView.LOGIN_CTL%>">SingIn</a></li>
+					<li><a class="dropdown-item" href="<%=AMView.LOGIN_CTL%>">SignIn</a></li>
 					<li><a class="dropdown-item"
-						href="<%=AMView.USER_REGISTRATION_CTL%>">SingUp</a></li>
+						href="<%=AMView.USER_REGISTRATION_CTL%>"></a></li>
 					<li><a class="dropdown-item" href="#"></a></li>
 				</ul></li>
 		</ul>

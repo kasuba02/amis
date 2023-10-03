@@ -91,8 +91,29 @@ public class UserCtl extends BaseCtl {
 		bean.setEmail(DataUtility.getString(request.getParameter("email")));
 		bean.setPassword(DataUtility.getString(request.getParameter("password")));
 		bean.setPhoneNo(DataUtility.getString(request.getParameter("phoneNo")));
-		bean.setRoleid(2);
-		bean.setRolename("Employ");
+	//	bean.setRoleid(2);
+		//bean.setRolename("Employ");
+		
+		bean.setRoleid(DataUtility.getLong(request.getParameter("role")));
+		
+		if (bean.getRoleid()==2) {
+			bean.setRolename("StockOfficer");
+		}else if (bean.getRoleid()==3) {
+			
+			bean.setRolename("ProcurementOfficer");
+		}else if (bean.getRoleid() == 4) {
+			
+			bean.setRolename("ManagerAccounts");
+		}else if (bean.getRoleid() == 5) {
+			
+			bean.setRolename("ManagerProcurement");
+		}
+		
+		
+		else {
+			bean.setRolename("Manager");
+		}
+		//bean.setRolename(DataUtility.getString(request.getParameter("roleName")));
 		bean.setDepartment(DataUtility.getString(request.getParameter("department")));
 		populateDTO(bean, request);
 		return bean;

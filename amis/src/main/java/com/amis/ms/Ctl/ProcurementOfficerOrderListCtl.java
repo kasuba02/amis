@@ -21,12 +21,12 @@ import com.amis.ms.Utility.ServletUtility;
 /**
  * Servlet implementation class HolidayListCtl
  */
-@WebServlet(name = "OrderListCtl", urlPatterns = "/orderlist")
-public class OrderListCtl extends BaseCtl {
+@WebServlet(name = "ProcurementOfficerOrderListCtl", urlPatterns = "/procurementofficerorderlist")
+public class ProcurementOfficerOrderListCtl extends BaseCtl {
 	private static final long serialVersionUID = 1L;
 	public static final String OP_Approve = "APPROVE";
 
-	public OrderListCtl() {
+	public ProcurementOfficerOrderListCtl() {
 		super();
 	}
 
@@ -126,7 +126,7 @@ public class OrderListCtl extends BaseCtl {
 
 	@Override
 	protected String getView() {
-		return AMView.ORDER_LIST_VIEW;
+		return AMView.PROCUREMENTOFFICER_ORDER_VIEW ;
 	}
 
 }

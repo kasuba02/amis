@@ -159,6 +159,7 @@ public class OrderModel {
 				System.out.println("44444in model list");
 				list.add(bean);
 				System.out.println("end list");
+				System.out.println(bean.getDepartment());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
