@@ -1,9 +1,13 @@
 <%@page import="com.amis.ms.Ctl.UserListCt"%>
 <%@page import="com.amis.ms.Ctl.UserCtl"%>
+<%@page import="com.amis.ms.Ctl.HolidayCtl"%>
 <%@page import="com.amis.ms.Bean.UserBean"%>
 <%@page import="com.amis.ms.Ctl.AMView"%>
 <%@page import="java.util.List"%>
 <%@page import="com.amis.ms.Ctl.AddUserCtl"%>
+<%@page import="com.amis.ms.Ctl.OrderCtl"%>
+<%@page import="com.amis.ms.Bean.OrderBean"%>
+<%@page import="com.amis.ms.Bean.RegisterBean"%>
 
 
 <%@page import="com.amis.ms.Ctl.RegistrationCtl"%>
@@ -18,6 +22,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript"> $('.datepicker').datepicker(); </script>
 
   <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -73,8 +80,9 @@
           <div class="top-navbar d-none d-xl-block">
             <ul class="navbar-nav align-items-center">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Dashboard</a>
+                <a class="nav-link" href="<%=AMView.PROCUREMENTOFFICER_CTL %>">Dashboard</a>
               </li>
+              
               <!--  
               <li class="nav-item">
                 <a class="nav-link" href="app-emailbox.html">Email</a>
@@ -94,8 +102,6 @@
           <div class="search-toggle-icon d-xl-none ms-auto">
             <i class="bi bi-search"></i>
           </div>
-          
-          
           <form class="searchbar d-none d-xl-flex ms-auto">
             <div
               class="position-absolute top-50 translate-middle-y search-icon ms-3"
@@ -113,8 +119,6 @@
               <i class="bi bi-x-lg"></i>
             </div>
           </form>
-          
-          
           <div class="top-navbar-right ms-3">
             <ul class="navbar-nav align-items-center">
               <li class="nav-item dropdown dropdown-large">
@@ -129,7 +133,7 @@
                       class="user-img"
                       alt=""
                     />
-                    <div class="user-name d-none d-sm-block">Stores Officer</div>
+                    <div class="user-name d-none d-sm-block">Procurement Officer</div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -144,7 +148,7 @@
                           height="60"
                         />
                         <div class="ms-3">
-                          <h6 class="mb-0 dropdown-user-name">Stores Officer</h6>
+                          <h6 class="mb-0 dropdown-user-name">Procurement Officer</h6>
                           <small
                             class="mb-0 dropdown-user-designation text-secondary"
                             >Smart Zambia</small
@@ -166,14 +170,13 @@
                       </div>
                     </a>
                   </li>
-                  
-                  <!-- 
                   <li>
                     <a class="dropdown-item" href="#">
                       <div class="d-flex align-items-center">
                         <div class="setting-icon">
                           <i class="bi bi-gear-fill"></i>
                         </div>
+                        <!--  
                         <div class="setting-text ms-3">
                           <span>Setting</span>
                         </div>
@@ -181,7 +184,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="index2.html">
+                    <a class="dropdown-item" >
                       <div class="d-flex align-items-center">
                         <div class="setting-icon">
                           <i class="bi bi-speedometer"></i>
@@ -215,13 +218,14 @@
                         </div>
                       </div>
                     </a>
+                    
+                    -->
                   </li>
-                  -->
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a
-                      class="dropdown-item"
-                      href="authentication-signup-with-header-footer.html"
+                      class="dropdown-item" href="<%=AMView.WELCOME_CTL %>"
+                      
                     >
                       <div class="d-flex align-items-center">
                         <div class="setting-icon">
@@ -232,6 +236,7 @@
                     </a>
                   </li>
                 </ul>
+                
               </li>
               <li class="nav-item dropdown dropdown-large">
                 <a
@@ -240,10 +245,11 @@
                   data-bs-toggle="dropdown"
                 >
                 
-                <!-- 
+                <!--  
                   <div class="projects">
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                   </div>
+                  
                   -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
@@ -367,11 +373,12 @@
                   data-bs-toggle="dropdown"
                 >
                 
-                  <!-- 
+                <!--  
                   <div class="messages">
                     <span class="notify-badge">5</span>
                     <i class="bi bi-messenger"></i>
                   </div>
+                  
                   -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
@@ -616,11 +623,12 @@
                   data-bs-toggle="dropdown"
                 >
                 
-                <!--  
+                <!-- 
                   <div class="notifications">
                     <span class="notify-badge">8</span>
                     <i class="bi bi-bell-fill"></i>
                   </div>
+                  
                   -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end p-0">
@@ -884,80 +892,59 @@
           </div>
         </div>
         <!--navigation-->
-        
-        <!--  
         <ul class="metismenu" id="menu">
-          <li>
-            <a href="javascript:;" class="has-arrow">
-              <div class="parent-icon"><i class="bi bi-house-door"></i></div>
-              <div class="menu-title">Dashboard</div>
-            </a>
-            <ul>
-              <li>
-                <a href="index.html"
-                  ><i class="bi bi-arrow-right-short"></i>eCommerce</a
-                >
-              </li>
-              <li>
-                <a href="index2.html"
-                  ><i class="bi bi-arrow-right-short"></i>Sales</a
-                >
-              </li>
-              <li>
-                <a href="index3.html"
-                  ><i class="bi bi-arrow-right-short"></i>Analytics</a
-                >
-              </li>
-              <li>
-                <a href="index4.html"
-                  ><i class="bi bi-arrow-right-short"></i>Project Management</a
-                >
-              </li>
-              <li>
-                <a href="index5.html"
-                  ><i class="bi bi-arrow-right-short"></i>CMS Dashboard</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript:;" class="has-arrow">
-              <div class="parent-icon"><i class="bi bi-grid"></i></div>
-              <div class="menu-title">Application</div>
-            </a>
-            <ul>
-              <li>
-                <a href="app-emailbox.html"
-                  ><i class="bi bi-arrow-right-short"></i>Email</a
-                >
-              </li>
-              <li>
-                <a href="app-chat-box.html"
-                  ><i class="bi bi-arrow-right-short"></i>Chat Box</a
-                >
-              </li>
-              <li>
-                <a href="app-file-manager.html"
-                  ><i class="bi bi-arrow-right-short"></i>File Manager</a
-                >
-              </li>
-              <li>
-                <a href="app-to-do.html"
-                  ><i class="bi bi-arrow-right-short"></i>Todo List</a
-                >
-              </li>
-              <li>
-                <a href="app-invoice.html"
-                  ><i class="bi bi-arrow-right-short"></i>Invoice</a
-                >
-              </li>
-              <li>
-                <a href="app-fullcalender.html"
-                  ><i class="bi bi-arrow-right-short"></i>Calendar</a
-                >
-              </li>
-            </ul>
-          </li>
+                     <li>
+              <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bi bi-house-door"></i>
+                </div>
+                <div class="menu-title">Dashboard</div>
+              </a>
+              <ul>
+                <li> <a href="index.html"><i class="bi bi-arrow-right-short"></i>Funiture and Fittings</a>
+                </li>
+                <li> <a href="index2.html"><i class="bi bi-arrow-right-short"></i>Motor Vehicle</a>
+                </li>
+                <li> <a href="index3.html"><i class="bi bi-arrow-right-short"></i>Plant and Equipment</a>
+                </li>
+                <li> <a href="index4.html"><i class="bi bi-arrow-right-short"></i>Buildings</a>
+                </li>
+                <li> <a href="index5.html"><i class="bi bi-arrow-right-short"></i>Office Equipment</a>
+                </li>
+              </ul>
+            </li>
+
+        <li>
+              <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bi bi-grid"></i>
+                </div>
+                <div class="menu-title">Assets</div>
+              </a>
+              <ul>
+              <!--  
+              <li> <a href="<%=AMView.ASSET_REGISTRATION_CTL%>"><i class="bi bi-arrow-right-short"></i>Add Asset Details</a>
+                </li>
+               --> 
+                 <li> <a href="<%=AMView.ORDER_CTL%>"><i class="bi bi-arrow-right-short"></i>Store Order Details</a>
+                </li>
+              
+                <li> <a href="<%=AMView.PROCUREMENT_ORDER_LIST%>"><i class="bi bi-arrow-right-short"></i>Order Details</a>
+                </li>
+                
+                
+                 <!-- 
+                <li> <a href="app-file-manager.html"><i class="bi bi-arrow-right-short"></i>File Manager</a>
+                </li>
+                <li> <a href="app-to-do.html"><i class="bi bi-arrow-right-short"></i>Todo List</a>
+                </li>
+                <li> <a href="app-invoice.html"><i class="bi bi-arrow-right-short"></i>Invoice</a>
+                </li>
+                <li> <a href="app-fullcalender.html"><i class="bi bi-arrow-right-short"></i>Calendar</a>
+                </li>
+                -->
+              </ul>
+            </li>
+            
+            <!--  
           <li class="menu-label">UI Elements</li>
           <li>
             <a href="javascript:;" class="has-arrow">
@@ -1400,7 +1387,6 @@
             </a>
           </li>
         </ul>
-        -->
         <!--end navigation-->
       </aside>
       <!--end sidebar -->
@@ -1411,10 +1397,9 @@
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
         
         <!--  
-        
           <div class="breadcrumb-title pe-3">Tables</div>
-          
-         
+          -->
+          <!--  
           <div class="ps-3">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb mb-0 p-0">
@@ -1428,9 +1413,9 @@
             </nav>
           </div>
           -->
-          <!-- 
-          
           <div class="ms-auto">
+          
+          <!--  
             <div class="btn-group">
               <button type="button" class="btn btn-primary">Settings</button>
               <button
@@ -1452,268 +1437,172 @@
                 <a class="dropdown-item" href="javascript:;">Separated link</a>
               </div>
             </div>
+            
+            -->
           </div>
-          -->
-          
         </div>
         <!--end breadcrumb-->
         
-        <!-- Add User -->
-
-   <div class="container mt-5">
-	<h3 class="text-center mt-5">Asset Register</h3>
-	<form action="<%=AMView.USER_REGISTRATION_CTL%>" method="post">
-<h4 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h4>
-	<h4 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h4>
+        <!-- Add Order -->
+  <%
+		UserBean bean2 = (UserBean) session.getAttribute("user");
+	%>
 	
-		<jsp:useBean id="bean" scope="request"
-			class="com.amis.ms.Bean.UserBean" />
-		<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
-			type="hidden" name="createdBy" value="<%=bean.getCreatedby()%>">
-		<input type="hidden" name="modifiedBy"
-			value="<%=bean.getModifiedby()%>"> <input type="hidden"
-			name="createdDatetime" value="<%=bean.getCreatedatetime()%>">
-		<input type="hidden" name="modifiedDateTime"
-			value="<%=bean.getModifieddatetime()%>">
+	<h3 class="text-center mt-5">REGISTER ASSET</h3>
+	<hr>
+	<h5 class="text-center mt-5" style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h5>
+	<h5 class="text-center mt-5" style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h5>
 
-
-
+	<form action="<%=AMView.ORDER_CTL%>" method="post">
+	<jsp:useBean id="bean" scope="request"
+						class="com.amis.ms.Bean.RegisterBean" />
+	
 		<div class="container mt-5">
-		  <div class="row h-100 justify-content-center align-items-center">
-		  
-		  
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Asset Description
-					</label> <input type="text" name="firstName" class="form-control "
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
+			<div class="row h-100 justify-content-center align-items-center">
+				<div class="col-6">
+				<!--  <label class="form-label">Emp Name</label>--> <input type="hidden"
+						name="empName" class="form-control " value="<%=DataUtility.getStringData(bean2.getFirstName())%>" aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empName", request)%></div>
+				<div class="col-6">
+				<!--  	<label class="form-label">Emp Email</label> --><input type="hidden"
+						name="empEmail" class="form-control" value="<%=DataUtility.getStringData(bean2.getEmail())%>" aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empEmail", request)%></div>
+				<div class="col-6">
+				<!--  	<label class="form-label">Emp ContactNo</label> --><input type="hidden"
+						name="empContactNo" class="form-control"
+						aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean2.getPhoneNo())%>">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("empContactNo", request)%></div>
+				<!-- 
+				<div class="col-6">
+					<label class="form-label">Department</label> <input type="text"
+						name="empContactNo" class="form-control"
+						aria-describedby="emailHelp" value="<%=DataUtility.getStringData(bean2.getDepartment())%>">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("department", request)%></div>
+				-->
 			
-			
-			
-			
-			
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("firstName", request)%></div>
-	
-			
-			<%
-						HashMap<String, String> map = new HashMap<String, String>();
-						map.put("Office Equipment", "Office Equipment");
-						map.put("Funiture", "Funiture");
-						map.put("Fittings", "Fittings");
-						map.put("Buildings", "Buildings");
-						map.put("Motor Vehicle", "Motor Vehicle");
-						map.put("Plant and Equipment", "Plant and Equipment");
+				<%
+						HashMap<String, String> map1 = new HashMap<String, String>();
+				map1.put("Procurement", "Procurement");
+				map1.put("Accounts", "Accounts");
 					%>
-					
-					
-					
-					<!-- 
-					
-					
-					
-					 -->
 
 					<div class="col-6">
-						<label class="form-label">Asset Category</label>
-						<%=HTMLUtility.getList("department", String.valueOf(bean.getDepartment()), map)%>
+						<label class="form-label" value="<%=DataUtility.getStringData(bean2.getDepartment())%>" >Department</label>
+						<%=HTMLUtility.getList("department", String.valueOf(bean2.getDepartment()), map1)%>
 						</div>
-						
-						
-						
-						<div class="col-6" style="margin-left:10px;">
-						<label class="form-label">Department</label>
-						<select name="role" class="form-control">
-						 <option >---Select---</option>
-						 <option value="2">Human Resource</option>
-						<option value="3">Standards</option> 
-						<option value="4">Infrastructure</option>
-						<option value="5">Procurement</option> 
-						<option value="5">Accounts</option> 
-						<option value="5">Systems Development</option>
-						<option value="5">Digital Services</option>
-						
-						 </select>
-						</div>
-						
 	<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("department", request)%></div>
 			
-			
+		
+		
+		<div class="col-6">
+					<label class="form-label">IFMIS Order#</label> <input type="text"
+						name="order" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("IFMIS No", request)%></div>
+	
+	<!-- 	
+	<%
+						HashMap<String, String> map = new HashMap<String, String>();
+						map.put("Laptop", "Laptop");
+						map.put("Desktop", "Desktop");
+						map.put("Printer", "Scanner");
+						map.put("Printer", "Printer");
+					%>
+
 					<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label"></label>
-				<input type="text" name="lastName" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("lastName", request)%></div>
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Quantity</label> <input
-					type="text" name="email" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("email", request)%></div>
-			
-			< 
-			<div class="col-6">
-				<label for="exampleInputPassword1" class="form-label">Date Acquisition</label>
-				<input type="password" name="password" class="form-control"
-					id="exampleInputPassword1">
-			</div>
+						<label class="form-label">Item type</label>
+						<%=HTMLUtility.getList("ItemType", String.valueOf(bean.getLeaveType()), map)%>
+						</div>
+	<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("ItemType", request)%></div>
+   -->
+   
+		 <div class="col-6">
+					<label class="form-label">ItemType</label> <input type="text"
+						name="type" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Qty", request)%></div>								
 
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("password", request)%></div>
-			
-			
-			
-			
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">GRZ#</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">IFMIS Asset Number</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-              
-             
 
-            <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Serial Number</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
+				<div class="col-6">
+					<label class="form-label">Date</label> <input type="text"
+						name="leaveTo" data-provide="datepicker" id="datepicker" class="form-control" required="required">
+				</div>
+				<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("Date", request)%></div>
+
+		<br>
+				<div class="col-6">
+					<label class="form-label">Order Description</label>
+					<textarea rows="3" cols="3" name="leaveDescription"
+						class="form-control"></textarea>
+				</div>
+				<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("Description", request)%></div>
+
            
-           
-           
-           
-            <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Location</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
+           <div class="col-6">
+					<label class="form-label">Item#</label> <input type="text"
+						name="item" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Item", request)%></div>
+				
+				
+           <div class="col-6">
+					<label class="form-label">Qty#</label> <input type="text"
+						name="qty" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Qty", request)%></div>
+          <div class="col-6">
+					<label class="form-label">UOM</label> <input type="text"
+						name="uom" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("UOM", request)%></div>
+
+
+          <div class="col-6">
+					<label class="form-label">Code</label> <input type="text"
+						name="code" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Code", request)%></div>
+
+         <div class="col-6">
+					<label class="form-label">Price</label> <input type="text"
+						name="price" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Price", request)%></div>
+				
+				
+				<div class="col-6">
+				<!--  	<label class="form-label">Amount</label> --> <input type="hidden"
+						name="amount" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Amount", request)%></div>
+				
+				<br>
+				<div class="container text-center">
+					<input type="submit" class="btn btn-primary" name="operation"
+						value="<%=OrderCtl.OP_SAVE%>">
+				</div>
 			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-           
-          
-           
-           
-           
-            <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Plot Number</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-           
-           
-           
-           
-            <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Capitalization Amount</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-           
-           
-            
-           
-            <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Asset Status</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			
-			 
-			 <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Revaluation Amount</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			 <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Fair Value</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			 <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Estimated Useful Life</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			
-			 <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Disposal Date</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			 <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Disposal Price</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			 <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Disposal Type</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			 <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Depreciation</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			 <div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">Net Book Value</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-			
-			<div class="col-6">
-				<label for="exampleInputEmail1" class="form-label">IFMIS Purchase Order Date</label> <input
-					type="text" name="phoneNo" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			<div class="form-text" style="color: red"><%=ServletUtility.getErrorMessage("phoneNo", request)%></div>
-			
-<br>
-			<div class="container text-center">
-				<input type="submit" class="btn btn-primary" name="operation"
-					value="<%=RegistrationCtl.OP_SAVE%>">
-			</div>
-			</div>
+		
 		</div>
 	</form>
-<br>
+	<br>
 
 </div>
+      
+
+
       
        
       </main>

@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.amis.ms.Bean.HolidayBean;
 import com.amis.ms.Bean.OrderBean;
+import com.amis.ms.Bean.UserBean;
 import com.amis.ms.Exception.ApplicationException;
 import com.amis.ms.Utility.JDBCDataSource;
 
@@ -33,6 +34,56 @@ public class OrderModel {
 		return pk + 1;
 	}
 
+	public OrderBean findByPk(long pk) throws Exception {
+
+		OrderBean bean = null;
+		Connection conn = null;
+		try {
+			conn = JDBCDataSource.getConnection();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			PreparedStatement ps = conn.prepareStatement("SELECT * FROM holiday WHERE id=?");
+			ps.setLong(1, pk);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				 bean = new OrderBean();
+				System.out.println("111111in model list");
+				bean.setId(rs.getLong(1));
+				bean.setEmpName(rs.getString(2));
+				bean.setEmpEmail(rs.getString(3));
+				bean.setEmpContactNo(rs.getString(4));
+				bean.setLeaveType(rs.getString(5));
+				System.out.println("222in model list");
+				bean.setLeaveTo(rs.getDate(6));
+				bean.setLeavedescription(rs.getString(7));
+				bean.setOrder(rs.getLong(8));
+				bean.setItem(rs.getLong(9));
+				bean.setQty(rs.getLong(10));
+				bean.setUom(rs.getString(11));
+				bean.setCode(rs.getLong(12));
+				bean.setPrice(rs.getLong(13));
+				bean.setAmount(rs.getLong(14));
+				bean.setUserid(rs.getLong(15));
+				bean.setStatus(rs.getString(16));
+				System.out.println("23333in model list");
+				bean.setDepartment(rs.getString(17));
+				System.out.println("44444in model list");
+				
+				System.out.println("find end list");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return bean;
+	}
+	
+	
+	
+	
+	
 	public long add(OrderBean bean) throws Exception {
 		System.out.println("in add method");
 		Connection conn = null;
@@ -206,27 +257,28 @@ public class OrderModel {
 	}
 
 	
-	public long ApproveUpdate(HolidayBean bean) {
+	public long ApproveUpdate(OrderBean bean) {
 		System.out.println("in model 11111 update method");
 		int pk = 0;
 		
 		try {
 			Connection conn = JDBCDataSource.getConnection();
 			PreparedStatement ps = conn
-					.prepareStatement("update holiday set empName=?,empEmail=?,empContactNo=?,leavetype=?,leaveto=?,leavefrom=?,leaveDescription=?,userid=?, status=?,department=?  where Hid=?");
-			ps.setString(1, bean.getEmpName());
-			ps.setString(2, bean.getEmpEmail());
-			ps.setString(3, bean.getEmpContactNo());
-			ps.setString(4, bean.getLeaveType());
+					.prepareStatement("update holiday set leaveto=?,leaveDescription=?,order_number=?,item_number,Qty=?,uom=?,code=?, price=? where id=?");
+	
 			System.out.println("11111111111111111");
-			ps.setDate(5, new java.sql.Date(bean.getLeaveTo().getTime()));
-			ps.setDate(6, new java.sql.Date(bean.getLeaveFrom().getTime()));
+			ps.setDate(1, new java.sql.Date(bean.getLeaveTo().getTime()));
+			// ps.setDate(6 ,new java.sql.Date(bean.getLeaveTo().getTime()));
+			// ps.setDate(7 ,new java.sql.Date(bean.getLeaveFrom().getTime()));
 			System.out.println("nooooookkkk");
-			ps.setString(7, bean.getLeavedescription());
-			ps.setLong(8, bean.getUserid());
-			ps.setString(9, bean.getStatus());
-			ps.setString(10, bean.getDepartment());
-			ps.setLong(11, Hid);
+			ps.setString(2, bean.getLeavedescription());
+			ps.setLong(3, bean.getOrder());
+			ps.setLong(4, bean.getItem());
+			ps.setLong(5, bean.getQty());
+			ps.setString(6, bean.getUom());
+			ps.setLong(7, bean.getCode());
+			ps.setLong(8, bean.getPrice());
+			ps.setLong(9, bean.getId());
 			ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -237,7 +289,7 @@ public class OrderModel {
 	
 	
 	
-	public long Update(String status, long Hid) {
+	public long Update (String status, long Hid) {
 		System.out.println("in model 11111 update method");
 		int pk = 0;
 		try {
@@ -282,5 +334,35 @@ public class OrderModel {
 			e.printStackTrace();
 		}
 		return i;
+	}
+
+	public long Update(OrderBean bean) {
+		System.out.println("in model update method");
+		int pk = 0;
+		try {
+			Connection conn = JDBCDataSource.getConnection();
+			PreparedStatement ps = conn.prepareStatement(
+					"update holiday set leavetype=?, leaveto=?,leaveDescription=?,order_number=?,item_number,Qty=?,uom=?,code=?, price=?, department=? where id=?");
+			System.out.println("11111111111111111");
+			ps.setString(1, bean.getLeaveType());
+			ps.setDate(2, new java.sql.Date(bean.getLeaveTo().getTime()));
+			// ps.setDate(6 ,new java.sql.Date(bean.getLeaveTo().getTime()));
+			// ps.setDate(7 ,new java.sql.Date(bean.getLeaveFrom().getTime()));
+			System.out.println("nooooookkkk");
+			ps.setString(3, bean.getLeavedescription());
+			ps.setLong(4, bean.getOrder());
+			ps.setLong(5, bean.getItem());
+			ps.setLong(6, bean.getQty());
+			ps.setString(7, bean.getUom());
+			ps.setLong(8, bean.getCode());
+			ps.setLong(9, bean.getPrice());
+			ps.setString(10, bean.getDepartment());
+			ps.setLong(11, bean.getId());
+			 ps.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return pk;
 	}
 }

@@ -1503,7 +1503,8 @@
 						aria-describedby="emailHelp">
 				</div>
 				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("IFMIS No", request)%></div>
-			
+	
+	<!-- 	
 	<%
 						HashMap<String, String> map = new HashMap<String, String>();
 						map.put("Laptop", "Laptop");
@@ -1517,8 +1518,14 @@
 						<%=HTMLUtility.getList("ItemType", String.valueOf(bean.getLeaveType()), map)%>
 						</div>
 	<div class="form-text text-center" style="color: red"><%=ServletUtility.getErrorMessage("ItemType", request)%></div>
-
-										
+   -->
+   
+		 <div class="col-6">
+					<label class="form-label">ItemType</label> <input type="text"
+						name="type" class="form-control"
+						aria-describedby="emailHelp">
+				</div>
+				<div class="form-text  text-center" style="color: red"><%=ServletUtility.getErrorMessage("Qty", request)%></div>								
 
 
 				<div class="col-6">

@@ -1465,6 +1465,7 @@ select option[value="value-to-hide"] {
                     <th>Price</th>
                     <th>Amount</th>
                     <th>Status</th>
+                    <th>Actions</th>
                   </tr>
                   
                 </thead>
@@ -1506,6 +1507,46 @@ select option[value="value-to-hide"] {
 				<%}%>		
 				
 				<%}%>	
+				
+			 <td>
+                      <div
+                        class="table-actions d-flex align-items-center gap-3 fs-6"
+                      >
+                        <a
+                          href="<%=AMView.USER_CTL%>?id=<%=bean.getId()%>"
+                          class="text-primary"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="bottom"
+                          title="Views"
+                          ><i class="bi bi-eye-fill"></i
+                        ></a>
+                        <a
+                          href="<%=AMView.ORDER_EDIT%>?id=<%=bean.getId()%>"
+                          class="text-warning"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="bottom"
+                          title="Edit"
+                          ><i class="bi bi-pencil-fill"></i
+                        ></a>
+                        <a
+                          href="<%=AMView.USER_LIST_CTL%>?id=<%=bean.getId()%>"
+                          class="text-danger"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="bottom"
+                          title="Delete"
+                          ><i class="bi bi-trash-fill"></i
+                        ></a>
+                      </div>
+                    </td>
+         
+				
+				
+				
+				
+				
+				
+				
+				
 			</tr>
 			
 			

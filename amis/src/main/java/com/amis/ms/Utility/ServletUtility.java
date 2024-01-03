@@ -77,6 +77,8 @@ public class ServletUtility {
 	public static void setbean(BaseBean bean, HttpServletRequest request) {
 		request.setAttribute("bean", bean);
 	}
+	
+	
 
 	public static BaseBean getbean(HttpServletRequest request) {
 		return (BaseBean) request.getAttribute("bean");

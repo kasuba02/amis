@@ -37,6 +37,7 @@ public interface AMView {
 	public String STORES_OFFICER_ORDER_LIST_CTL = APP_CONTEXT + "/storesofficerorderlist";
 	public String PROCUREMENT_ORDER_LIST = APP_CONTEXT + "/procurementofficerorderlist";
 	public String UPDATE_USER = APP_CONTEXT + "/updateuser";
+	public String ORDER_EDIT = APP_CONTEXT + "/orderedit";
 	
 	public String ADMIN_VIEW = PAGE_FOLDER + "/admin.jsp";
 	public String STOCKOFFICER_VIEW = PAGE_FOLDER + "/stockofficer.jsp";
@@ -69,4 +70,6 @@ public interface AMView {
 	public String STOCKOFFICER_ORDER_VIEW = PAGE_FOLDER + "/orderlist.jsp";
 	public String PROCUREMENTOFFICER_ORDER_VIEW = PAGE_FOLDER + "/procurementofficerorderlist.jsp";
 	public String UPDATE_USER_VIEW = PAGE_FOLDER + "/updateuser.jsp";
+	public String ORDER_EDIT_VIEW = PAGE_FOLDER + "/orderedit.jsp";
+	
 }  

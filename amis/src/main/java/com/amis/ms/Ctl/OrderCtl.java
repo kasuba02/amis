@@ -97,7 +97,7 @@ public class OrderCtl extends BaseCtl {
 		bean.setEmpName(DataUtility.getString(request.getParameter("empName")));
 		bean.setEmpEmail(DataUtility.getString(request.getParameter("empEmail")));
 		bean.setEmpContactNo(DataUtility.getString(request.getParameter("empContactNo")));
-		bean.setLeaveType(DataUtility.getString(request.getParameter("leaveType")));
+		bean.setLeaveType(DataUtility.getString(request.getParameter("type")));
 		//bean.setLeaveFrom(LocalDate.parse(request.getParameter("leaveTo")));
 		bean.setLeaveTo(DataUtility.getDate(request.getParameter("leaveTo")));
 		bean.setLeavedescription(DataUtility.getString(request.getParameter("leaveDescription")));
